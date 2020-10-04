@@ -1,0 +1,189 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>VC++ 6.0的简单使用及switch case内部优化方案 | ileemi's blog</title><meta name="keywords" content="VC++ 6.0 的简单使用,switch case 的内部优化"><meta name="author" content="ileemi"><meta name="copyright" content="ileemi"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="VC++ 6.0远古级IDE的使用，C语言switch case的内部优化。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VC++ 6.0的简单使用及switch case内部优化方案">
+<meta property="og:url" content="http://yoursite.com/posts/7f4048e6/index.html">
+<meta property="og:site_name" content="ileemi&#39;s blog">
+<meta property="og:description" content="VC++ 6.0远古级IDE的使用，C语言switch case的内部优化。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/img/article/11.jpg">
+<meta property="article:published_time" content="2020-04-03T04:14:52.000Z">
+<meta property="article:modified_time" content="2020-10-02T13:49:29.024Z">
+<meta property="article:author" content="ileemi">
+<meta property="article:tag" content="VC++ 6.0 的简单使用">
+<meta property="article:tag" content="switch case 的内部优化">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/img/article/11.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://yoursite.com/posts/7f4048e6/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.2.0',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true,
+  postUpdate: '2020-10-02 21:49:29'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {
+  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }
+})()</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/author.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">13</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">17</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/photos/"><i class="fa-fw fas fa-photo-video"></i><span> photo</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div id="body-wrap"><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#VC-6-0-%E6%96%87%E4%BB%B6%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="toc-number">1.</span> <span class="toc-text">VC++ 6.0 文件的创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#VC-6-0-%E5%BF%AB%E6%8D%B7%E9%94%AE%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">VC++ 6.0 快捷键的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%A4%BA%E4%BE%8B%EF%BC%9A"><span class="toc-number">2.1.</span> <span class="toc-text">操作示例：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#API-PK-%E5%BA%93%E5%87%BD%E6%95%B0"><span class="toc-number">3.</span> <span class="toc-text">API PK 库函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#if-else"><span class="toc-number">4.</span> <span class="toc-text">if else</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#switch-case"><span class="toc-number">5.</span> <span class="toc-text">switch case</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%97%E5%87%BA%E7%BB%93%E8%AE%BA"><span class="toc-number">6.</span> <span class="toc-text">得出结论</span></a></li></ol></div></div></div><header class="post-bg" id="page-header" style="background-image: url(/img/article/11.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ileemi's blog</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/photos/"><i class="fa-fw fas fa-photo-video"></i><span> photo</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">VC++ 6.0的简单使用及switch case内部优化方案</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-04-03T04:14:52.000Z" title="发表于 2020-04-03 12:14:52">2020-04-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-10-02T13:49:29.024Z" title="更新于 2020-10-02 21:49:29">2020-10-02</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><p>VC++ 6.0远古级IDE的使用，C语言switch case的内部优化。<a id="more"></a></p>
+<h3 id="VC-6-0-文件的创建"><a href="#VC-6-0-文件的创建" class="headerlink" title="VC++ 6.0 文件的创建"></a>VC++ 6.0 文件的创建</h3><ul>
+<li>第一步：打开Microsoft Visual C++ 6.0</li>
+<li>第二步：点击左上角的File、New </li>
+<li>第三步：点击File栏下的C++ Source File，之后输入对应的文件名及文件存放目录即可创建一个新的<code>.c</code>文件</li>
+</ul>
+<p><img src="1.jpg"></p>
+<h3 id="VC-6-0-快捷键的使用"><a href="#VC-6-0-快捷键的使用" class="headerlink" title="VC++ 6.0 快捷键的使用"></a>VC++ 6.0 快捷键的使用</h3><ul>
+<li>F1：调出MSDN（查询函数帮助文档）</li>
+<li>F5：编译后调试运行 </li>
+<li>F7：编译 + 链接 </li>
+<li>F9：当前行添加/取消断点 </li>
+<li>F10：步过（单步走）</li>
+<li>F11：步入（单步进入，查看函数实现的功能）</li>
+<li>CTRL + F5：直接运行 </li>
+<li>CTRL + F7：只编译不链接 </li>
+<li>Shift + F11：Step out（跳出）</li>
+<li>CTRL + F10：单步跳转到鼠标点击的光标处 </li>
+<li>ALT + 8：跳转到反汇编代码窗口</li>
+<li>IDE（Integrated Development Environment）：集成开发环境</li>
+</ul>
+<h4 id="操作示例："><a href="#操作示例：" class="headerlink" title="操作示例："></a>操作示例：</h4><p>VC++ 6.0菜单栏的调整：<br><img src="2.jpg"></p>
+<p>VC++ 6.0 调试程序时，需要使用的窗口：内存窗口、监视窗口、堆栈窗口、寄存器窗口。<br><img src="3.jpg"></p>
+<p>在编写程序是，可以将鼠标的光标放置在想要了解的库函数上，按F1键，即可弹出MSDN帮助文档。<br><img src="4.jpg"></p>
+<p>VC++ 6.0 使用Alt + 8 打开当前行的反汇编窗口，同时还可以鼠标右击该窗口，点击”Code Bytes” 查看对应的机器码。<br><img src="5.jpg"></p>
+<p>Windows XP 下使用VC++ 6.0 查看内存的分布，可以发现内存4GB空间的前2GB有前64KB、后64KB的内存空间是属于系统保留区，前64KB用来做无效指针，无效赋值的检查，后64KB用来做内核的交互。<br><img src="6.jpg"></p>
+<h3 id="API-PK-库函数"><a href="#API-PK-库函数" class="headerlink" title="API PK 库函数"></a>API PK 库函数</h3><p>看环境：如果没有造缓存， fread 就比 库函数的执行效率要慢一点。<br>malloc（C库函数） –&gt;  HeapAlloc（API函数）<br>不同平台的C编译器会对这个平台接口做一定的封装工作。</p>
+<h3 id="if-else"><a href="#if-else" class="headerlink" title="if else"></a>if else</h3><p>可以做复杂的条件判断、可以设定条件的优先级（将执行数据量大的条件放置在前面）、可做区间判断、使用灵活。<br>缺点：阶梯比较，如果数量比较次数较多的话，就没有switch case效果好。<br><img src="7.jpg"></p>
+<h3 id="switch-case"><a href="#switch-case" class="headerlink" title="switch case"></a>switch case</h3><p>case 的值必须是整型系：整数或者类整型 ASCII（‘A’），long（5L）型都可以。<br>switch语句是一个优化版的分支结构，在汇编的年代这个结构很多人在用，后来C/C++标准委员会觉得这个结构很实用，之后就将其集成到C语言的语法框架里，之后将其命名为switch结构。俩次到位，第一次求得switch表达式中的值，根据值访问内存中对应的地址表进行跳转。</p>
+<p>switch case内部优化方案之一（连续或较为连续方案）<br><img src="8.jpg"></p>
+<p>当case值按正顺序排列时在内存中的分布情况如下<br><img src="9.jpg"><br>发现在内存地址表中，存储的case值下对应的代码地址是连续的</p>
+<p><strong>基本结构思想：根据switch中表达式的值，找到内存中case内存地址表的对应的下标值。</strong></p>
+<p>当打乱case 值进行逆序排列后，内存中的分布情况如下<br><img src="10.jpg"><br>即使case 后的值顺序进行了更改，但是通过case 的内存地址表可以发现，case值依然是顺序排列的。</p>
+<p>将case值进行调大，打乱顺序，case值没有间隔：<br><img src="11.jpg"><br><img src="12.jpg"></p>
+<p>通过反汇编窗口可以发现case值从20开始，前20是空值，就像数组中的前20元素是空值一样，存储空值是没有意义的，所以系统内部进行了坐标平移，即使case值顺序打乱后，通过case 内存地址表可以发现，其值依然是按循序进行排列的</p>
+<p>将case值设定为不连续的，中间进行跳值，case值从20到28，去掉23、25、27<br><img src="13.jpg"><br><img src="14.jpg"><br>通过case 地址内存表的地址以及反汇编窗口可以发现，其case值依旧是连续排列的，中间缺少的值case 23、case 25、case27都用default下的语句地址进行了填充。</p>
+<p>将case值与值之间间隔设置5个（超过5个）<br><img src="15.jpg"><br><img src="16.jpg"><br>可以看出case值在内存中的分布已经不在连续了</p>
+<h3 id="得出结论"><a href="#得出结论" class="headerlink" title="得出结论"></a>得出结论</h3><ul>
+<li>每个switch case分支的访问效率均等</li>
+<li>不管怎样调整case的位置都不会影响它们的访问效率</li>
+</ul>
+<p>switch case 结构有四套优化方案，上面演示的就是连续或较为连续的方案：case的数量需要大于三个，只有这样才有优化行为，case 的值需要连续，如果不连续，中间欠缺的值不能超过5个，如果超过5个或者等于5个，那么其在内存中就不是连续存储的。<br>case 的值不能为小数是因为其在内存中存储的结构类似于数组的存储结构，需要根据switch表达式的值在内存中进行查表，基于此，case 的值必须是类整型。</p>
+<hr>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">ileemi</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yoursite.com/posts/7f4048e6/">http://yoursite.com/posts/7f4048e6/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yoursite.com" target="_blank">ileemi's blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/VC-6-0-%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/">VC++ 6.0 的简单使用</a><a class="post-meta__tags" href="/tags/switch-case-%E7%9A%84%E5%86%85%E9%83%A8%E4%BC%98%E5%8C%96/">switch case 的内部优化</a></div><div class="post_share"><div class="social-share" data-image="/img/article/11.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src="/img/wechat.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.png" target="_blank"><img class="post-qr-code-img" src="/img/alipay.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/4debd7e3/"><img class="prev-cover" src="/img/article/12.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">C语言函数间的工作原理</div></div></a></div><div class="next-post pull-right"><a href="/posts/bd6a3c41/"><img class="next-cover" src="/img/article/10.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">BOC外汇牌价项目实践</div></div></a></div></nav></article></main><footer id="footer" style="background-image: url(/img/article/11.jpg)"><div id="footer-wrap"><div class="copyright">&copy;2020 By ileemi</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://ileemi.cn/">blog</a>!</div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
