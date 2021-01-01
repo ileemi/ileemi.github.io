@@ -601,7 +601,9 @@
   <entry>
     <title>BOC外汇牌价项目实践</title>
     <url>/posts/bd6a3c41/</url>
-    <content><![CDATA[<p>中国银行外汇牌价看板项目实现记录。<a id="more"></a></p>
+    <content><![CDATA[<p>中国银行外汇牌价看板项目实现记录。</p>
+<a id="more"></a>
+
 <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>声明：本项目并没有进行非法用途，只是用来学习相应的知识的。</p>
 <p>2020年3月9日科锐的预科班开始了，在 <strong>Tony He</strong> 老师半个月带领下，我最终完成了 <strong>BOC外汇牌价看板</strong> 这个小项目。<strong>Tony He</strong> 老师的讲课方式刷新了我的认知，可以说要比在校期间老师们的讲课方式效果上要好很多。在这半个月里，何老师以最终的小项目为目的，将所用到的知识点分成批次，每天给我们讲解一点所需的知识点，由浅入深，坚持每天练习所讲的知识点。经过这半个多月的学习，也将我之前学的相关<strong>C语言</strong>知识进一步等到了巩固，指针、文件操作等。记得 <strong>Tony He</strong> 老师的一句话：**”掌握了正确的学习程序设计的方法就是，从解决实际需求出发、带着问题学、急用先学，学以致用。当你在实践中遇到一个问题，就去寻找这个问题的答案，每次找到的答案帮助你解决一个实际的问题，然后又遇到一个新的问题，然后再解决它……你的学习就会变得非常有效，而且你学到的知识就是最实用、最急用的知识。”** 这句话讲的确实很对。</p>
 <!--more-->
@@ -1162,8 +1164,9 @@
 <p>操作示例：</p>
 <p><img src="43.png"><br><img src="44.png"><br><img src="45.png"><br><img src="46.png"><br><img src="47.png"><br><img src="48.png"></p>
 <blockquote>
-<p><strong>Add 方法在内存中的真实地址计算方法：</strong><br><code>Add 方法在虚表中的地址 + 地址上的值（向右移一个字节）+ 5</code><br><code>0x792C1005 + 0x00017906 + 5 = 0x792D8910</code><br><img src="49.png"></p>
+<p><strong>Add 方法在内存中的真实地址计算方法：</strong><br><code>Add 方法在虚表中的地址 + 地址上的值（向右移一个字节）+ 5</code><br><code>0x792C1005 + 0x00017906 + 5 = 0x792D8910</code></p>
 </blockquote>
+<p><img src="49.png"></p>
 <blockquote>
 <p>这样每次使用插件中的方法时，都需要在内存中找到其真正的代码地址，并进行修改，比较繁琐。由于之前的测试可以准确的找到其真正的地址，为了下次可以直接使用插件中的 “<strong>Add</strong>“ 方法，所以在找到其真正地址的时候，就应该将 “<strong>.dll</strong>“ 文件通过 “<strong>WinHex</strong>“ 或者其它二进制工具进行修改内存。</p>
 </blockquote>
