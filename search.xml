@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>C语言函数间的工作原理</title>
-    <url>/posts/4debd7e3/</url>
+    <url>/posts/4debd7e3.html/</url>
     <content><![CDATA[<p>函数的工作原理以及实现过程。<a id="more"></a></p>
 <h3 id="break、continue的简单使用"><a href="#break、continue的简单使用" class="headerlink" title="break、continue的简单使用"></a>break、continue的简单使用</h3><p>break：如果在循环内有个if判断，其条件为false，那么就会跳出循环，不在执行<br>continue：如果在循环内有个if判断，其条件为false，那么就会跳过本次循环，继续执行</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-comment">/*</span><br><span class="hljs-comment">统计1~20之间不能被3整除的数的个数并输出这些数</span><br><span class="hljs-comment">*/</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">int</span> nCount = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span> (; i &lt;= <span class="hljs-number">20</span>; i++)<br>    &#123;<br>        <span class="hljs-keyword">if</span> (i % <span class="hljs-number">3</span> == <span class="hljs-number">0</span>)<br>        &#123;<br>            <span class="hljs-keyword">continue</span>;<br>        &#125;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d  &quot;</span>, i);<br>        nCount++;<br>    &#125;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\r\n&quot;</span>);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;1~20内的数字不能被3整除的数有 %d 个&quot;</span>, nCount);<br>    system(<span class="hljs-string">&quot;pause&quot;</span>);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
@@ -92,7 +92,7 @@
   </entry>
   <entry>
     <title>数组和结构体</title>
-    <url>/posts/5fab7dcc/</url>
+    <url>/posts/5fab7dcc.html/</url>
     <content><![CDATA[<p>数组以及结构体的简单操作。<a id="more"></a></p>
 <h3 id="程序就是数据结构加算法"><a href="#程序就是数据结构加算法" class="headerlink" title="程序就是数据结构加算法"></a>程序就是数据结构加算法</h3><p>数据结构：就是数据再计算机中的存储方式<br>算法：对数据进行各种处理</p>
 <!--more-->
@@ -150,7 +150,7 @@
   </entry>
   <entry>
     <title>Hexo博客绑定个人域名</title>
-    <url>/posts/5b60be46/</url>
+    <url>/posts/5b60be46.html/</url>
     <content><![CDATA[<p>将自己的blog绑定自己购买的域名。<a id="more"></a></p>
 <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>前些天使用Hexo框架在Github pages上搭建了一个自己的个人博客，在访问我的博客时需要输入GitHub下的二级域名才能进行访问，例如：<code>ileemi.github.io</code>。首先我觉得这个二级域名看着就有点不自然，名字有点长了，看一眼不太好记。更换个新的域名就是为了使我的博客域名更加好记，更加具有独特性，所以我就去阿里的万网购买了一个新的域名，今天我把博客从原来使用的GitHub二级域名更换为我新买的个人域名。<br>这样一来，我就可以直接在浏览器上输入新买的域名来访问我的博客，想看我博客的同学们也就不用再输入那长长的域名了，接下来我就把整个更换的过程记录一下吧。</p>
 <!--more-->
@@ -172,7 +172,7 @@
   </entry>
   <entry>
     <title>VC++ 6.0的简单使用及switch case内部优化方案</title>
-    <url>/posts/7f4048e6/</url>
+    <url>/posts/7f4048e6.html/</url>
     <content><![CDATA[<p>VC++ 6.0远古级IDE的使用，C语言switch case的内部优化。<a id="more"></a></p>
 <h3 id="VC-6-0-文件的创建"><a href="#VC-6-0-文件的创建" class="headerlink" title="VC++ 6.0 文件的创建"></a>VC++ 6.0 文件的创建</h3><ul>
 <li>第一步：打开Microsoft Visual C++ 6.0</li>
@@ -226,7 +226,7 @@
   </entry>
   <entry>
     <title>Windows编程总结</title>
-    <url>/posts/e1fa0632/</url>
+    <url>/posts/e1fa0632.html/</url>
     <content><![CDATA[<p>Windows编程课程总结。<a id="more"></a></p>
 <h3 id="课前回顾"><a href="#课前回顾" class="headerlink" title="课前回顾"></a>课前回顾</h3><p>单个钩子不可以拦截消息<br>钩子配合SetWindowLong可以做到拦截消息</p>
 <p>全局钩子需要配合dll，随机基址等于主模块变成dll，可以下全局钩子。</p>
@@ -317,7 +317,7 @@
   </entry>
   <entry>
     <title>手动实现C语言的预处理、编译和链接</title>
-    <url>/posts/fc67ec64/</url>
+    <url>/posts/fc67ec64.html/</url>
     <content><![CDATA[<p>手动实现代码的预处理，编译，链接。 <a id="more"></a></p>
 <h3 id="编写示例代码"><a href="#编写示例代码" class="headerlink" title="编写示例代码"></a>编写示例代码</h3><p>作为程序员我们需要了解我们编写的源程序是如何成为可执行文件，不能只会使用集成开发环境来完成这个过程。下面我就手动实现一下C语言的预处理、编译和链接这三个过程。</p>
 <p>先用记事本写下下面几行代码并保存到计算机的磁盘内：</p>
@@ -347,7 +347,7 @@
   </entry>
   <entry>
     <title>线程的创建以及线程间的通信</title>
-    <url>/posts/8a662d26/</url>
+    <url>/posts/8a662d26.html/</url>
     <content><![CDATA[<p>Windows下线程的创建及使用。<a id="more"></a></p>
 <p>判断管道内是否有数据API –&gt; PeekNamedPipe。<br>进程间的通讯（Inter-Process Communication –&gt; IPC） –&gt; 指至少两个进程或线程间传送数据或信号的一些技术或方法。</p>
 <h3 id="线程介绍"><a href="#线程介绍" class="headerlink" title="线程介绍"></a>线程介绍</h3><p>进程（60年代）<br>线程（80年代）–&gt; 为每个程序分配单独的空间来运行程序</p>
@@ -430,7 +430,7 @@
   </entry>
   <entry>
     <title>笔记本风扇清灰</title>
-    <url>/posts/8740e7fd/</url>
+    <url>/posts/8740e7fd.html/</url>
     <content><![CDATA[<p>给笔记本清理灰尘。<a id="more"></a></p>
 <p>中午吃完午饭，想了想17年买的笔记本到现在还没清理过散热风扇，里面的灰肯定不会少，所以我打算盘它，给本子的散热风扇清清灰。我记得我的笔记本去年年初的时候更换过电池，也是自己动手更换的，挺简单的。如果有同学们看到我写的这篇blog的话，在这里呢我给大家说下，在我们玩笔记本的时候尽量插着电源玩，因为这样是降低笔记本电池损耗率最直接最简单的方法，亲测有效。为什么呢？文章最后再给大家说吧，我们还是先来拆机吧。</p>
 <ul>
@@ -456,7 +456,7 @@
   </entry>
   <entry>
     <title>进制间的转换</title>
-    <url>/posts/24d10e2f/</url>
+    <url>/posts/24d10e2f.html/</url>
     <content><![CDATA[<p>进制计数法的表现方式以及进制之间相互的转换。</p>
 <a id="more"></a>
 
@@ -600,7 +600,7 @@
   </entry>
   <entry>
     <title>BOC外汇牌价项目实践</title>
-    <url>/posts/bd6a3c41/</url>
+    <url>/posts/bd6a3c41.html/</url>
     <content><![CDATA[<p>中国银行外汇牌价看板项目实现记录。</p>
 <a id="more"></a>
 
@@ -696,7 +696,7 @@
   </entry>
   <entry>
     <title>C语言的文件操作的使用</title>
-    <url>/posts/48585443/</url>
+    <url>/posts/48585443.html/</url>
     <content><![CDATA[<p>文件操作的使用以注意事项。</p>
 <a id="more"></a>
 
@@ -751,7 +751,7 @@
   </entry>
   <entry>
     <title>使用Hexo和Github搭建个人博客</title>
-    <url>/posts/2e566f5/</url>
+    <url>/posts/2e566f5.html/</url>
     <content><![CDATA[<p>使用Hexo + Node.js 搭建个人博客。<a id="more"></a></p>
 <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在开始讲解博客搭建的过程前，我想还是先来讲讲我为什么要搭建我的个人博客吧。其实在搭建我的个人博客之前呢，我就一直希望能够拥有一个属于自己的个人博客。</p>
 <p>为什么呢？<strong>一方面</strong>是因为我觉得学计算机的能够拥有一个属于自己的个人博客是一件非常酷的事情，我们可以用blog来记录我们的学习心得，学习路途中所遇到的问题以及解决方法，以至于在我们下一次又遇到同样问题的时候可以回看下我们之前是怎样处理这些问题的，同时呢，我觉得还可以帮助哪些和我遇到相同问题的同学们，希望我写的文章可以去帮助Ta们。这一点呢我就深有体会，在学计算机的这几年里呢，说实话我也经常会遇到一些让我束手无策的问题。当遇到自己无法解决问题的时候呢，就会去问度娘或者Google一下，当我们使用搜索引擎后，我想搜索引擎就会把之前有人踩过的坑和解决该问题的方法显现在我们面前，这个时候我们就可以去解决我们遇到的问题了。在读大学期间，我也见过国内几大博客平台上好多大佬们坚持写作，把自己遇到的坑，心得体会都分享给我们，让我们后人参考，学习。</p>
@@ -891,7 +891,7 @@
   </entry>
   <entry>
     <title>自定义函数和字符串处理以及EasyX图形库</title>
-    <url>/posts/3fe6e553/</url>
+    <url>/posts/3fe6e553.html/</url>
     <content><![CDATA[<p>自定义函数和字符串处理以及EasyX图形库的简单使用。 <a id="more"></a></p>
 <h3 id="字符串常量的存储"><a href="#字符串常量的存储" class="headerlink" title="字符串常量的存储"></a>字符串常量的存储</h3><p>1、由一对双引号包含的若干字符<br>2、使用malloc()函数分配一块空间用于存储多个字符</p>
 <!--more-->
@@ -974,7 +974,7 @@
   </entry>
   <entry>
     <title>跨语言插件的编写以及使用</title>
-    <url>/posts/undefined/</url>
+    <url>/posts/f6dc690f.html/</url>
     <content><![CDATA[<h3 id="插件的使用代码封装"><a href="#插件的使用代码封装" class="headerlink" title="插件的使用代码封装"></a>插件的使用代码封装</h3><p>插件使用的步骤：</p>
 <ul>
 <li>查询注册表</li>
@@ -983,30 +983,30 @@
 <li>产生对象</li>
 </ul>
 <p>每次使用插件前几步操作需要重复，所以可以对其进行封装，方便下次使用，代码实例：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-comment">// Use.cpp : 此文件包含 &quot;main&quot; 函数。程序执行将在此处开始并结束。</span><br><span class="hljs-comment">//</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;MyInterface.h&quot;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;oleauto.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;comdef.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;atlbase.h&gt;</span></span><br><span class="hljs-function">HRESULT __stdcall <span class="hljs-title">MyGetClassObject</span><span class="hljs-params">(<span class="hljs-keyword">const</span> GUID&amp; clsid, <span class="hljs-keyword">const</span> GUID&amp; IID, <span class="hljs-keyword">void</span>** ppObject)</span> </span>&#123;<br>  <span class="hljs-keyword">char</span> szKey[MAX_PATH];<br>  <span class="hljs-comment">//&#123;FE5955E8-B3C2-4a1d-8B46-B24CDF5F2808&#125;</span><br>  wsprintf(szKey, <br>  <span class="hljs-string">&quot;CLSID\\&#123;%08X-%04X-%04X-%02X%02X-%02X%02X%02X%02X%02X%02X&#125;\\InprocServer32&quot;</span>, <br>  clsid.Data1, clsid.Data2, clsid.Data3, <br>  clsid.Data4[<span class="hljs-number">0</span>], clsid.Data4[<span class="hljs-number">1</span>], clsid.Data4[<span class="hljs-number">2</span>], <br>  clsid.Data4[<span class="hljs-number">3</span>], clsid.Data4[<span class="hljs-number">4</span>], clsid.Data4[<span class="hljs-number">5</span>], <br>  clsid.Data4[<span class="hljs-number">6</span>], clsid.Data4[<span class="hljs-number">7</span>]);<br>  <span class="hljs-comment">//1. 查询注册表</span><br>  <span class="hljs-keyword">char</span> szPath[MAX_PATH];<br>  LONG nLen = <span class="hljs-keyword">sizeof</span>(szPath);<br>  HKEY hKey;<br>  RegOpenKey(HKEY_CLASSES_ROOT, szKey, &amp;hKey);<br>  RegQueryValue(hKey, <span class="hljs-literal">NULL</span>, szPath, &amp;nLen);<br>  RegCloseKey(hKey);<br>  <span class="hljs-comment">//2.加载</span><br>  HMODULE hDll = LoadLibrary(szPath);<br>  <span class="hljs-keyword">if</span> (hDll == <span class="hljs-literal">NULL</span>)<br>    <span class="hljs-keyword">return</span> S_FALSE;<br>  MY_GET_CLASS_OBJECT pfnGetClassObj = <br>  (MY_GET_CLASS_OBJECT)GetProcAddress(hDll, <span class="hljs-string">&quot;DllGetClassObject&quot;</span>);<br>  <span class="hljs-keyword">if</span> (pfnGetClassObj == <span class="hljs-literal">NULL</span>)<br>    <span class="hljs-keyword">return</span> S_FALSE;<br>  <span class="hljs-keyword">return</span> (*pfnGetClassObj)(clsid, IID, ppObject);<br>&#125;<br><span class="hljs-function">HRESULT __stdcall <span class="hljs-title">MyCreateObject</span><span class="hljs-params">(<span class="hljs-keyword">const</span> GUID&amp; clsid, <span class="hljs-keyword">const</span> GUID&amp; IID, <span class="hljs-keyword">void</span>** ppObject)</span> </span>&#123;<br>  IMyFactory* pFactory = <span class="hljs-literal">NULL</span>;<br>  HRESULT hr = MyGetClassObject(clsid, IID_IMyFactory, (<span class="hljs-keyword">void</span>**)&amp; pFactory);<br>  <span class="hljs-keyword">if</span> (FAILED(hr)) &#123;<br>    <span class="hljs-keyword">return</span> hr;<br>  &#125;<br>  hr = pFactory-&gt;CreateObj(IID, ppObject);<br>  pFactory-&gt;Release();<br>  <span class="hljs-keyword">return</span> hr;<br>&#125;<br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> TYPE&gt;<br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CMyPtr</span> &#123;</span><br><span class="hljs-keyword">public</span>:<br>  CMyPtr(TYPE* pObject = <span class="hljs-literal">NULL</span>) &#123;<br>    m_pObject = pObject;<br>  &#125;<br>  ~CMyPtr() &#123;<br>    <span class="hljs-keyword">if</span> (m_pObject != <span class="hljs-literal">NULL</span>) &#123;<br>      m_pObject-&gt;Release();<br>      m_pObject = <span class="hljs-literal">NULL</span>;<br>    &#125;<br>  &#125;<br>  TYPE* <span class="hljs-keyword">operator</span>-&gt; () &#123;<br>    <span class="hljs-keyword">return</span> m_pObject;<br>  &#125;<br><span class="hljs-keyword">private</span>:<br>  TYPE* m_pObject;<br>&#125;;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>  <span class="hljs-comment">//.TLB(typelib)   接口定义语言  ==&gt;  编译 ==&gt; TLB </span><br>  CMyPtr&lt;ISuperMath&gt; pSuperMath = <span class="hljs-literal">NULL</span>;<br>  HRESULT hr = MyCreateObject(CLSID_CSuperMath, IID_ISuperMath, (<span class="hljs-keyword">void</span>**)&amp;pSuperMath);<br>  <span class="hljs-keyword">if</span> (FAILED(hr)) &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>  &#125;<br>  <span class="hljs-keyword">long</span> ret;<br>  pSuperMath-&gt;Add(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, &amp;ret);<br>  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;1+2=%d\n&quot;</span>, ret);<br>  <span class="hljs-comment">//pSuperMath-&gt;Release();</span><br>  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-comment">// Use.cpp : 此文件包含 &quot;main&quot; 函数。程序执行将在此处开始并结束。</span><br><span class="hljs-comment">//</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;MyInterface.h&quot;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;oleauto.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;comdef.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;atlbase.h&gt;</span></span><br><br><span class="hljs-function">HRESULT __stdcall <span class="hljs-title">MyGetClassObject</span><span class="hljs-params">(<span class="hljs-keyword">const</span> GUID&amp; clsid, <span class="hljs-keyword">const</span> GUID&amp; IID, <span class="hljs-keyword">void</span>** ppObject)</span> </span>&#123;<br>  <span class="hljs-keyword">char</span> szKey[MAX_PATH];<br>  <span class="hljs-comment">//&#123;FE5955E8-B3C2-4a1d-8B46-B24CDF5F2808&#125;</span><br>  wsprintf(szKey, <br>  <span class="hljs-string">&quot;CLSID\\&#123;%08X-%04X-%04X-%02X%02X-%02X%02X%02X%02X%02X%02X&#125;\\InprocServer32&quot;</span>, <br>  clsid.Data1, clsid.Data2, clsid.Data3, <br>  clsid.Data4[<span class="hljs-number">0</span>], clsid.Data4[<span class="hljs-number">1</span>], clsid.Data4[<span class="hljs-number">2</span>], <br>  clsid.Data4[<span class="hljs-number">3</span>], clsid.Data4[<span class="hljs-number">4</span>], clsid.Data4[<span class="hljs-number">5</span>], <br>  clsid.Data4[<span class="hljs-number">6</span>], clsid.Data4[<span class="hljs-number">7</span>]);<br><br>  <span class="hljs-comment">//1. 查询注册表</span><br>  <span class="hljs-keyword">char</span> szPath[MAX_PATH];<br>  LONG nLen = <span class="hljs-keyword">sizeof</span>(szPath);<br>  HKEY hKey;<br>  RegOpenKey(HKEY_CLASSES_ROOT, szKey, &amp;hKey);<br>  RegQueryValue(hKey, <span class="hljs-literal">NULL</span>, szPath, &amp;nLen);<br>  RegCloseKey(hKey);<br><br>  <span class="hljs-comment">//2.加载</span><br>  HMODULE hDll = LoadLibrary(szPath);<br>  <span class="hljs-keyword">if</span> (hDll == <span class="hljs-literal">NULL</span>)<br>    <span class="hljs-keyword">return</span> S_FALSE;<br>  MY_GET_CLASS_OBJECT pfnGetClassObj = <br>  (MY_GET_CLASS_OBJECT)GetProcAddress(hDll, <span class="hljs-string">&quot;DllGetClassObject&quot;</span>);<br>  <span class="hljs-keyword">if</span> (pfnGetClassObj == <span class="hljs-literal">NULL</span>)<br>    <span class="hljs-keyword">return</span> S_FALSE;<br>  <span class="hljs-keyword">return</span> (*pfnGetClassObj)(clsid, IID, ppObject);<br>&#125;<br><br><span class="hljs-function">HRESULT __stdcall <span class="hljs-title">MyCreateObject</span><span class="hljs-params">(<span class="hljs-keyword">const</span> GUID&amp; clsid, <span class="hljs-keyword">const</span> GUID&amp; IID, <span class="hljs-keyword">void</span>** ppObject)</span> </span>&#123;<br>  IMyFactory* pFactory = <span class="hljs-literal">NULL</span>;<br>  HRESULT hr = MyGetClassObject(clsid, IID_IMyFactory, (<span class="hljs-keyword">void</span>**)&amp; pFactory);<br>  <span class="hljs-keyword">if</span> (FAILED(hr)) &#123;<br>    <span class="hljs-keyword">return</span> hr;<br>  &#125;<br>  hr = pFactory-&gt;CreateObj(IID, ppObject);<br>  pFactory-&gt;Release();<br>  <span class="hljs-keyword">return</span> hr;<br>&#125;<br><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> TYPE&gt;<br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CMyPtr</span> &#123;</span><br><span class="hljs-keyword">public</span>:<br>  CMyPtr(TYPE* pObject = <span class="hljs-literal">NULL</span>) &#123;<br>    m_pObject = pObject;<br>  &#125;<br>  ~CMyPtr() &#123;<br>    <span class="hljs-keyword">if</span> (m_pObject != <span class="hljs-literal">NULL</span>) &#123;<br>      m_pObject-&gt;Release();<br>      m_pObject = <span class="hljs-literal">NULL</span>;<br>    &#125;<br>  &#125;<br>  TYPE* <span class="hljs-keyword">operator</span>-&gt; () &#123;<br>    <span class="hljs-keyword">return</span> m_pObject;<br>  &#125;<br><span class="hljs-keyword">private</span>:<br>  TYPE* m_pObject;<br>&#125;;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>  <span class="hljs-comment">//.TLB(typelib)   接口定义语言  ==&gt;  编译 ==&gt; TLB </span><br>  CMyPtr&lt;ISuperMath&gt; pSuperMath = <span class="hljs-literal">NULL</span>;<br>  HRESULT hr = MyCreateObject(CLSID_CSuperMath, IID_ISuperMath, (<span class="hljs-keyword">void</span>**)&amp;pSuperMath);<br>  <span class="hljs-keyword">if</span> (FAILED(hr)) &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>  &#125;<br><br>  <span class="hljs-keyword">long</span> ret;<br>  pSuperMath-&gt;Add(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, &amp;ret);<br>  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;1+2=%d\n&quot;</span>, ret);<br>  <span class="hljs-comment">//pSuperMath-&gt;Release();</span><br>  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>使用智能指针将使用插件代码再次进行精简，不需要手动释放。</p>
 <p>接口头文件的类中不写虚析构是为了使生成的虚表统一。</p>
 <h3 id="接口统一规范"><a href="#接口统一规范" class="headerlink" title="接口统一规范"></a>接口统一规范</h3><p>接口头文件各个语言使用时不一致，方便各个语言都支持使用，使用微软定义的新头文件格式（二进制形式（没有语法格式））：<strong>TLB</strong>（typelib）文件（C++、C都认识）。</p>
 <p>接口定义语言 –&gt; 通过编译器（<strong>midl</strong>）进行编译 –&gt; TLB文件</p>
 <p>新建文件（**.idl** 结尾），使用实例：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;unknwn.idl&quot;</span>;<br>[<br>    object, <span class="hljs-comment">// 表示该插件是本地的插件，不是远程的</span><br>    uuid&#123;&#125;  <span class="hljs-comment">// 插件的GUID</span><br>]<br>interface ISuperMath : <span class="hljs-keyword">public</span> IUnKnow<br>&#123;<br>    [helpstring(<span class="hljs-string">&quot;加法运算&quot;</span>)] <span class="hljs-comment">// 方法注释 </span><br>    <span class="hljs-function">HRESULT <span class="hljs-title">Add</span><span class="hljs-params">([<span class="hljs-keyword">int</span>]<span class="hljs-keyword">long</span> n1, [<span class="hljs-keyword">int</span>]<span class="hljs-keyword">long</span> n2, [out, retval]<span class="hljs-keyword">long</span>* result)</span></span>;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;unknwn.idl&quot;</span>;<br>[<br>    object, <span class="hljs-comment">// 表示该插件是本地的插件，不是远程的</span><br>    uuid&#123;&#125;  <span class="hljs-comment">// 插件的GUID</span><br>]<br><br>interface ISuperMath : <span class="hljs-keyword">public</span> IUnKnow<br>&#123;<br>    [helpstring(<span class="hljs-string">&quot;加法运算&quot;</span>)] <span class="hljs-comment">// 方法注释 </span><br>    <span class="hljs-function">HRESULT <span class="hljs-title">Add</span><span class="hljs-params">([<span class="hljs-keyword">int</span>]<span class="hljs-keyword">long</span> n1, [<span class="hljs-keyword">int</span>]<span class="hljs-keyword">long</span> n2, [out, retval]<span class="hljs-keyword">long</span>* result)</span></span>;<br>&#125;;<br></code></pre></td></tr></table></figure>
 <p>方法的调用约定不需要写，基类 <strong>IUnKnow</strong>（微软标准的基类）的定义在头文件 “<strong>unknow.idl</strong>“ 中。**.idl** 语法支持在所有的函数方法前添加一个属性，属性使用 “<strong>[]</strong>“ 号包着。</p>
 <p>使用 编译器（<strong>midl</strong>）对其进行编译，操作示例：<br><img src="1.png"><br><img src="2.png"><br><img src="3.png"></p>
 <blockquote>
 <p>上述的操作，生成的文件依然是供 C、C++ 使用的。</p>
 </blockquote>
 <p>将 <strong>.idl</strong> 文件编译成二进制文件（**.tlb**文件）：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;unknwn.idl&quot;</span>;<br>[<br>  uuid(<span class="hljs-number">39</span>A61464<span class="hljs-number">-0E8</span>B<span class="hljs-number">-4f</span>66<span class="hljs-number">-941</span>A<span class="hljs-number">-9057229</span>D65C5),   <span class="hljs-comment">// 库的GUID</span><br>  version(<span class="hljs-number">1.0</span>) <span class="hljs-comment">// 插件的版本号</span><br>]<br>library MySuperMathLib<br>&#123;<br>  [<br>    object,<br>    uuid(<span class="hljs-number">581</span>DBB8F-D856<span class="hljs-number">-4735</span>-A9D2-F5B10244CF2B)  <span class="hljs-comment">// 插件的GUID</span><br>  ]<br>  interface ISuperMath : IUnknown<br>  &#123;<br>    [helpstring(<span class="hljs-string">&quot;加法运算&quot;</span>)] <span class="hljs-function">HRESULT <span class="hljs-title">Add</span><span class="hljs-params">([in]<span class="hljs-keyword">long</span> n1, [in]<span class="hljs-keyword">long</span> n2, [out, retval]<span class="hljs-keyword">long</span>* result)</span></span>;<br>  &#125;;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;unknwn.idl&quot;</span>;<br>[<br>  uuid(<span class="hljs-number">39</span>A61464<span class="hljs-number">-0E8</span>B<span class="hljs-number">-4f</span>66<span class="hljs-number">-941</span>A<span class="hljs-number">-9057229</span>D65C5),   <span class="hljs-comment">// 库的GUID</span><br>  version(<span class="hljs-number">1.0</span>) <span class="hljs-comment">// 插件的版本号</span><br>]<br><br>library MySuperMathLib<br>&#123;<br>  [<br>    object,<br>    uuid(<span class="hljs-number">581</span>DBB8F-D856<span class="hljs-number">-4735</span>-A9D2-F5B10244CF2B)  <span class="hljs-comment">// 插件的GUID</span><br>  ]<br>  interface ISuperMath : IUnknown<br>  &#123;<br>    [helpstring(<span class="hljs-string">&quot;加法运算&quot;</span>)] <span class="hljs-function">HRESULT <span class="hljs-title">Add</span><span class="hljs-params">([in]<span class="hljs-keyword">long</span> n1, [in]<span class="hljs-keyword">long</span> n2, [out, retval]<span class="hljs-keyword">long</span>* result)</span></span>;<br>  &#125;;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>操作示例：</p>
 <p><img src="4.png"></p>
 <p><strong>.idl</strong> 文件编译后 <strong>.h</strong> 文件和 <strong>.tlb</strong> 二进制文件同时存在，代码示例：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;unknwn.idl&quot;</span>;<br>[<br>  object,<br>  uuid(<span class="hljs-number">581</span>DBB8F-D856<span class="hljs-number">-4735</span>-A9D2-F5B10244CF2B)    <span class="hljs-comment">// 插件的GUID</span><br>]<br>interface ISuperMath : IUnknown<br>&#123;<br>  [helpstring(<span class="hljs-string">&quot;加法运算&quot;</span>)] <span class="hljs-function">HRESULT <span class="hljs-title">Add</span><span class="hljs-params">([in]<span class="hljs-keyword">long</span> n1, [in]<span class="hljs-keyword">long</span> n2, [out, retval]<span class="hljs-keyword">long</span>* result)</span></span>;<br>&#125;;<br>[<br>  uuid(<span class="hljs-number">39</span>A61464<span class="hljs-number">-0E8</span>B<span class="hljs-number">-4f</span>66<span class="hljs-number">-941</span>A<span class="hljs-number">-9057229</span>D65C5),<br>  version(<span class="hljs-number">1.0</span>)<br>]<br>library MySuperMathLib<br>&#123;<br>  interface ISuperMath;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;unknwn.idl&quot;</span>;<br>[<br>  object,<br>  uuid(<span class="hljs-number">581</span>DBB8F-D856<span class="hljs-number">-4735</span>-A9D2-F5B10244CF2B)    <span class="hljs-comment">// 插件的GUID</span><br>]<br><br>interface ISuperMath : IUnknown<br>&#123;<br>  [helpstring(<span class="hljs-string">&quot;加法运算&quot;</span>)] <span class="hljs-function">HRESULT <span class="hljs-title">Add</span><span class="hljs-params">([in]<span class="hljs-keyword">long</span> n1, [in]<span class="hljs-keyword">long</span> n2, [out, retval]<span class="hljs-keyword">long</span>* result)</span></span>;<br>&#125;;<br>[<br>  uuid(<span class="hljs-number">39</span>A61464<span class="hljs-number">-0E8</span>B<span class="hljs-number">-4f</span>66<span class="hljs-number">-941</span>A<span class="hljs-number">-9057229</span>D65C5),<br>  version(<span class="hljs-number">1.0</span>)<br>]<br><br>library MySuperMathLib<br>&#123;<br>  interface ISuperMath;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>操作示例：<br><img src="5.png"></p>
 <blockquote>
 <p>添加类工厂GUID</p>
 </blockquote>
 <p>代码示例：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;unknwn.idl&quot;</span>;<br>[<br>  object,<br>  uuid(<span class="hljs-number">581</span>DBB8F-D856<span class="hljs-number">-4735</span>-A9D2-F5B10244CF2B)<br>]<br>interface ISuperMath : IUnknown<br>&#123;<br>  [helpstring(<span class="hljs-string">&quot;加法运算&quot;</span>)] <span class="hljs-function">HRESULT <span class="hljs-title">Add</span><span class="hljs-params">([in]<span class="hljs-keyword">long</span> n1, [in]<span class="hljs-keyword">long</span> n2, [out, retval]<span class="hljs-keyword">long</span>* result)</span></span>;<br>&#125;;<br>[<br>  uuid(<span class="hljs-number">39</span>A61464<span class="hljs-number">-0E8</span>B<span class="hljs-number">-4f</span>66<span class="hljs-number">-941</span>A<span class="hljs-number">-9057229</span>D65C5),<br>  version(<span class="hljs-number">1.0</span>)<br>]<br>library MySuperMathLib<br>&#123;<br>  [<br>    uuid(FE5955E8-B3C2<span class="hljs-number">-4</span>a1d<span class="hljs-number">-8B</span>46-B24CDF5F2808)  <span class="hljs-comment">// 类工厂的GUID</span><br>  ]<br>  coclass CSuperMath<br>  &#123;<br>    interface ISuperMath;<br>  &#125;;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;unknwn.idl&quot;</span>;<br>[<br>  object,<br>  uuid(<span class="hljs-number">581</span>DBB8F-D856<span class="hljs-number">-4735</span>-A9D2-F5B10244CF2B)<br>]<br><br>interface ISuperMath : IUnknown<br>&#123;<br>  [helpstring(<span class="hljs-string">&quot;加法运算&quot;</span>)] <span class="hljs-function">HRESULT <span class="hljs-title">Add</span><span class="hljs-params">([in]<span class="hljs-keyword">long</span> n1, [in]<span class="hljs-keyword">long</span> n2, [out, retval]<span class="hljs-keyword">long</span>* result)</span></span>;<br>&#125;;<br>[<br>  uuid(<span class="hljs-number">39</span>A61464<span class="hljs-number">-0E8</span>B<span class="hljs-number">-4f</span>66<span class="hljs-number">-941</span>A<span class="hljs-number">-9057229</span>D65C5),<br>  version(<span class="hljs-number">1.0</span>)<br>]<br><br>library MySuperMathLib<br>&#123;<br>  [<br>    uuid(FE5955E8-B3C2<span class="hljs-number">-4</span>a1d<span class="hljs-number">-8B</span>46-B24CDF5F2808)  <span class="hljs-comment">// 类工厂的GUID</span><br>  ]<br>  coclass CSuperMath<br>  &#123;<br>    interface ISuperMath;<br>  &#125;;<br>&#125;<br></code></pre></td></tr></table></figure>
 <blockquote>
 <p>xxx_i.c 文件内保存了库、接口、类工厂的GUID：<br><img src="6.png"></p>
 </blockquote>
@@ -1029,7 +1029,7 @@
 <p>插件注册：</p>
 <p><img src="11.png"></p>
 <p>“dllmain.cpp” 代码示例：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-comment">// dllmain.cpp : 定义 DLL 应用程序的入口点。</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;pch.h&quot;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;CSuperMathFactory.h&quot;</span></span><br>HMODULE g_hModule;<br><span class="hljs-function">BOOL APIENTRY <span class="hljs-title">DllMain</span><span class="hljs-params">(</span></span><br><span class="hljs-function"><span class="hljs-params">  HMODULE hModule,</span></span><br><span class="hljs-function"><span class="hljs-params">  DWORD  ul_reason_for_call,</span></span><br><span class="hljs-function"><span class="hljs-params">  LPVOID lpReserved)</span></span><br><span class="hljs-function"></span>&#123;<br>  g_hModule = hModule;<br>  <span class="hljs-keyword">switch</span> (ul_reason_for_call)<br>  &#123;<br>  <span class="hljs-keyword">case</span> DLL_PROCESS_ATTACH:<br>  <span class="hljs-keyword">case</span> DLL_THREAD_ATTACH:<br>  <span class="hljs-keyword">case</span> DLL_THREAD_DETACH:<br>  <span class="hljs-keyword">case</span> DLL_PROCESS_DETACH:<br>    <span class="hljs-keyword">break</span>;<br>  &#125;<br>  <span class="hljs-keyword">return</span> TRUE;<br>&#125;<br><span class="hljs-comment">//DllGetClassObject</span><br><span class="hljs-function">HRESULT __stdcall <span class="hljs-title">DllGetClassObject</span><span class="hljs-params">(<span class="hljs-keyword">const</span> GUID&amp; clsid, <span class="hljs-keyword">const</span> GUID&amp; iid, <span class="hljs-keyword">void</span>** ppObject)</span> </span>&#123;<br>  <span class="hljs-comment">//判断创建哪个类工厂</span><br>  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">memcmp</span>(&amp;clsid, &amp;CLSID_CSuperMath, <span class="hljs-keyword">sizeof</span>(GUID)) == <span class="hljs-number">0</span>) &#123;<br>    <span class="hljs-keyword">static</span> CSuperMathFactory* pObject = <span class="hljs-literal">NULL</span>;<br>    <span class="hljs-keyword">if</span> (pObject == <span class="hljs-literal">NULL</span>) &#123;<br>      pObject = <span class="hljs-keyword">new</span> CSuperMathFactory();<br>    &#125;<br>    HRESULT hr = pObject-&gt;QueryInterface(iid, ppObject);<br>    <span class="hljs-keyword">if</span> (FAILED(hr) &amp;&amp; CSuperMathFactory::m_nRefCount == <span class="hljs-number">0</span>) &#123;<br>      <span class="hljs-keyword">delete</span> pObject;<br>      pObject = <span class="hljs-literal">NULL</span>;<br>      <span class="hljs-keyword">return</span> hr;<br>    &#125;<br>    *ppObject = pObject;<br>    <span class="hljs-keyword">return</span> hr;<br>  &#125;<br>  <span class="hljs-keyword">return</span> E_NOINTERFACE;<br>&#125;<br><span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* g_szRegTable[][<span class="hljs-number">3</span>] =<br>&#123;<br>  &#123;<br>    <span class="hljs-string">&quot;CLSID\\&#123;FE5955E8-B3C2-4a1d-8B46-B24CDF5F2808&#125;&quot;</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&quot;MySuperMath&quot;</span><br>  &#125;,<br>  &#123;<br>    <span class="hljs-string">&quot;CLSID\\&#123;FE5955E8-B3C2-4a1d-8B46-B24CDF5F2808&#125;\\InprocServer32&quot;</span>, <span class="hljs-number">0</span>,(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>*)<span class="hljs-number">-1</span><br>  &#125;,<br>  &#123;<br>    <span class="hljs-string">&quot;CLSID\\&#123;FE5955E8-B3C2-4a1d-8B46-B24CDF5F2808&#125;\\ProgID&quot;</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&quot;MySuperMathsrv.1&quot;</span><br>  &#125;,<br>  &#123;<br>    <span class="hljs-string">&quot;CLSID\\&#123;FE5955E8-B3C2-4a1d-8B46-B24CDF5F2808&#125;\\TypeLib&quot;</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&quot;&#123;FE5955E8-B3C2-4a1d-8B46-B24CDF5F2808&#125;&quot;</span><br>  &#125;,<br>  &#123;<br>    <span class="hljs-string">&quot;MySuperMathsrv.1&quot;</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&quot;MySuperMath&quot;</span><br>  &#125;,<br>  &#123;<br>    <span class="hljs-string">&quot;MySuperMathsrv.1\\CLSID&quot;</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&quot;&#123;FE5955E8-B3C2-4a1d-8B46-B24CDF5F2808&#125;&quot;</span><br>  &#125;,<br>&#125;;<br><span class="hljs-comment">//是否能卸载</span><br><span class="hljs-function">STDAPI <span class="hljs-title">DllCanUnloadNow</span><span class="hljs-params">()</span> </span>&#123;<br>  <span class="hljs-keyword">return</span> S_OK;<br>&#125;<br><span class="hljs-comment">//安装</span><br><span class="hljs-function">STDAPI <span class="hljs-title">DllRegisterServer</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;<br>  <span class="hljs-keyword">char</span> szBuf[MAX_PATH];<br>  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-keyword">sizeof</span>(g_szRegTable) / <span class="hljs-keyword">sizeof</span>(g_szRegTable[<span class="hljs-number">0</span>]); i++) &#123;<br>    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* pszSubKey = g_szRegTable[i][<span class="hljs-number">0</span>];<br>    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* pszValueName = g_szRegTable[i][<span class="hljs-number">1</span>];<br>    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* pszValue = g_szRegTable[i][<span class="hljs-number">2</span>];<br>    HKEY hKey;<br>    RegCreateKey(HKEY_CLASSES_ROOT, pszSubKey, &amp;hKey);<br>    <span class="hljs-keyword">if</span> (pszValue == (<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>*)<span class="hljs-number">-1</span>) &#123;<br>      GetModuleFileName(g_hModule, szBuf, <span class="hljs-keyword">sizeof</span>(szBuf));<br>      pszValue = szBuf;<br>    &#125;<br>    RegSetValueEx(hKey, pszValueName, <span class="hljs-literal">NULL</span>, REG_SZ, (CONST BYTE*)pszValue, <span class="hljs-built_in">strlen</span>(pszValue));<br>  &#125;<br>  <span class="hljs-keyword">return</span> S_OK;<br>&#125;<br><span class="hljs-comment">//卸载</span><br><span class="hljs-function">STDAPI <span class="hljs-title">DllUnregisterServer</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;<br>  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-keyword">sizeof</span>(g_szRegTable) / <span class="hljs-keyword">sizeof</span>(g_szRegTable[<span class="hljs-number">0</span>]) - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) &#123;<br>    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* pszSubKey = g_szRegTable[i][<span class="hljs-number">0</span>];<br>    RegDeleteKey(HKEY_CLASSES_ROOT, pszSubKey);<br>  &#125;<br>  <span class="hljs-keyword">return</span> S_OK;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-comment">// dllmain.cpp : 定义 DLL 应用程序的入口点。</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;pch.h&quot;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;CSuperMathFactory.h&quot;</span></span><br><br>HMODULE g_hModule;<br><span class="hljs-function">BOOL APIENTRY <span class="hljs-title">DllMain</span><span class="hljs-params">(</span></span><br><span class="hljs-function"><span class="hljs-params">  HMODULE hModule,</span></span><br><span class="hljs-function"><span class="hljs-params">  DWORD  ul_reason_for_call,</span></span><br><span class="hljs-function"><span class="hljs-params">  LPVOID lpReserved)</span></span><br><span class="hljs-function"></span>&#123;<br>  g_hModule = hModule;<br>  <span class="hljs-keyword">switch</span> (ul_reason_for_call)<br>  &#123;<br>  <span class="hljs-keyword">case</span> DLL_PROCESS_ATTACH:<br>  <span class="hljs-keyword">case</span> DLL_THREAD_ATTACH:<br>  <span class="hljs-keyword">case</span> DLL_THREAD_DETACH:<br>  <span class="hljs-keyword">case</span> DLL_PROCESS_DETACH:<br>    <span class="hljs-keyword">break</span>;<br>  &#125;<br>  <span class="hljs-keyword">return</span> TRUE;<br>&#125;<br><br><span class="hljs-comment">//DllGetClassObject</span><br><span class="hljs-function">HRESULT __stdcall <span class="hljs-title">DllGetClassObject</span><span class="hljs-params">(<span class="hljs-keyword">const</span> GUID&amp; clsid, <span class="hljs-keyword">const</span> GUID&amp; iid, <span class="hljs-keyword">void</span>** ppObject)</span> </span>&#123;<br>  <span class="hljs-comment">//判断创建哪个类工厂</span><br>  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">memcmp</span>(&amp;clsid, &amp;CLSID_CSuperMath, <span class="hljs-keyword">sizeof</span>(GUID)) == <span class="hljs-number">0</span>) &#123;<br>    <span class="hljs-keyword">static</span> CSuperMathFactory* pObject = <span class="hljs-literal">NULL</span>;<br>    <span class="hljs-keyword">if</span> (pObject == <span class="hljs-literal">NULL</span>) &#123;<br>      pObject = <span class="hljs-keyword">new</span> CSuperMathFactory();<br>    &#125;<br><br>    HRESULT hr = pObject-&gt;QueryInterface(iid, ppObject);<br>    <span class="hljs-keyword">if</span> (FAILED(hr) &amp;&amp; CSuperMathFactory::m_nRefCount == <span class="hljs-number">0</span>) &#123;<br>      <span class="hljs-keyword">delete</span> pObject;<br>      pObject = <span class="hljs-literal">NULL</span>;<br>      <span class="hljs-keyword">return</span> hr;<br>    &#125;<br>    *ppObject = pObject;<br>    <span class="hljs-keyword">return</span> hr;<br>  &#125;<br>  <span class="hljs-keyword">return</span> E_NOINTERFACE;<br>&#125;<br><br><span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* g_szRegTable[][<span class="hljs-number">3</span>] =<br>&#123;<br>  &#123;<br>    <span class="hljs-string">&quot;CLSID\\&#123;FE5955E8-B3C2-4a1d-8B46-B24CDF5F2808&#125;&quot;</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&quot;MySuperMath&quot;</span><br>  &#125;,<br>  &#123;<br>    <span class="hljs-string">&quot;CLSID\\&#123;FE5955E8-B3C2-4a1d-8B46-B24CDF5F2808&#125;\\InprocServer32&quot;</span>, <span class="hljs-number">0</span>,(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>*)<span class="hljs-number">-1</span><br>  &#125;,<br>  &#123;<br>    <span class="hljs-string">&quot;CLSID\\&#123;FE5955E8-B3C2-4a1d-8B46-B24CDF5F2808&#125;\\ProgID&quot;</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&quot;MySuperMathsrv.1&quot;</span><br>  &#125;,<br>  &#123;<br>    <span class="hljs-string">&quot;CLSID\\&#123;FE5955E8-B3C2-4a1d-8B46-B24CDF5F2808&#125;\\TypeLib&quot;</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&quot;&#123;FE5955E8-B3C2-4a1d-8B46-B24CDF5F2808&#125;&quot;</span><br>  &#125;,<br>  &#123;<br>    <span class="hljs-string">&quot;MySuperMathsrv.1&quot;</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&quot;MySuperMath&quot;</span><br>  &#125;,<br>  &#123;<br>    <span class="hljs-string">&quot;MySuperMathsrv.1\\CLSID&quot;</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&quot;&#123;FE5955E8-B3C2-4a1d-8B46-B24CDF5F2808&#125;&quot;</span><br>  &#125;,<br>&#125;;<br><br><span class="hljs-comment">//是否能卸载</span><br><span class="hljs-function">STDAPI <span class="hljs-title">DllCanUnloadNow</span><span class="hljs-params">()</span> </span>&#123;<br>  <span class="hljs-keyword">return</span> S_OK;<br>&#125;<br><br><span class="hljs-comment">//安装</span><br><span class="hljs-function">STDAPI <span class="hljs-title">DllRegisterServer</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;<br>  <span class="hljs-keyword">char</span> szBuf[MAX_PATH];<br>  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-keyword">sizeof</span>(g_szRegTable) / <span class="hljs-keyword">sizeof</span>(g_szRegTable[<span class="hljs-number">0</span>]); i++) &#123;<br>    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* pszSubKey = g_szRegTable[i][<span class="hljs-number">0</span>];<br>    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* pszValueName = g_szRegTable[i][<span class="hljs-number">1</span>];<br>    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* pszValue = g_szRegTable[i][<span class="hljs-number">2</span>];<br>    HKEY hKey;<br>    RegCreateKey(HKEY_CLASSES_ROOT, pszSubKey, &amp;hKey);<br>    <span class="hljs-keyword">if</span> (pszValue == (<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>*)<span class="hljs-number">-1</span>) &#123;<br>      GetModuleFileName(g_hModule, szBuf, <span class="hljs-keyword">sizeof</span>(szBuf));<br>      pszValue = szBuf;<br>    &#125;<br>    RegSetValueEx(hKey, pszValueName, <span class="hljs-literal">NULL</span>, REG_SZ, (CONST BYTE*)pszValue, <span class="hljs-built_in">strlen</span>(pszValue));<br>  &#125;<br>  <span class="hljs-keyword">return</span> S_OK;<br>&#125;<br><br><span class="hljs-comment">//卸载</span><br><span class="hljs-function">STDAPI <span class="hljs-title">DllUnregisterServer</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>&#123;<br>  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-keyword">sizeof</span>(g_szRegTable) / <span class="hljs-keyword">sizeof</span>(g_szRegTable[<span class="hljs-number">0</span>]) - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) &#123;<br>    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* pszSubKey = g_szRegTable[i][<span class="hljs-number">0</span>];<br>    RegDeleteKey(HKEY_CLASSES_ROOT, pszSubKey);<br>  &#125;<br>  <span class="hljs-keyword">return</span> S_OK;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <h4 id="插件接口功能的使用"><a href="#插件接口功能的使用" class="headerlink" title="插件接口功能的使用"></a>插件接口功能的使用</h4><h5 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h5><ul>
 <li>创建对应的工程文件使用即可（这里以.cpp为例）</li>
@@ -1039,12 +1039,12 @@
 <blockquote>
 <p>方法1，代码示例：</p>
 </blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-comment">// CppTest.cpp : 此文件包含 &quot;main&quot; 函数。程序执行将在此处开始并结束。</span><br><span class="hljs-comment">//</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;ISuperMath_h.h&quot;</span></span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>  CoInitialize(<span class="hljs-literal">NULL</span>);<br>  IClassFactory* pFactory = <span class="hljs-literal">NULL</span>;<br>  HRESULT hr = CoGetClassObject(<br>    CLSID_CSuperMath, CLSCTX_INPROC_SERVER,<br>    <span class="hljs-literal">NULL</span>, IID_IClassFactory, (<span class="hljs-keyword">void</span>**)pFactory);<br>  <span class="hljs-keyword">if</span> (FAILED(hr))<br>  &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>  &#125;<br>  ISuperMath* pSuperMath = <span class="hljs-literal">NULL</span>;<br>  pFactory-&gt;CreateInstance(<span class="hljs-literal">NULL</span>, IID_ISuperMath, (<span class="hljs-keyword">void</span>**)&amp;pSuperMath);<br>  <span class="hljs-keyword">long</span> nRet = <span class="hljs-number">0</span>;<br>  pSuperMath-&gt;Add(<span class="hljs-number">999</span>, <span class="hljs-number">1</span>, &amp;nRet);<br>  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;999 + 1 = %d\n&quot;</span>, nRet);<br>  pSuperMath-&gt;Sub(<span class="hljs-number">20</span>, <span class="hljs-number">10</span>, &amp;nRet);<br>  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;20 - 10 = %d\n&quot;</span>, nRet);<br>  CoUninitialize();<br>  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-comment">// CppTest.cpp : 此文件包含 &quot;main&quot; 函数。程序执行将在此处开始并结束。</span><br><span class="hljs-comment">//</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;ISuperMath_h.h&quot;</span></span><br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>  CoInitialize(<span class="hljs-literal">NULL</span>);<br>  IClassFactory* pFactory = <span class="hljs-literal">NULL</span>;<br>  HRESULT hr = CoGetClassObject(<br>    CLSID_CSuperMath, CLSCTX_INPROC_SERVER,<br>    <span class="hljs-literal">NULL</span>, IID_IClassFactory, (<span class="hljs-keyword">void</span>**)pFactory);<br><br>  <span class="hljs-keyword">if</span> (FAILED(hr))<br>  &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>  &#125;<br>  ISuperMath* pSuperMath = <span class="hljs-literal">NULL</span>;<br>  pFactory-&gt;CreateInstance(<span class="hljs-literal">NULL</span>, IID_ISuperMath, (<span class="hljs-keyword">void</span>**)&amp;pSuperMath);<br>  <span class="hljs-keyword">long</span> nRet = <span class="hljs-number">0</span>;<br>  pSuperMath-&gt;Add(<span class="hljs-number">999</span>, <span class="hljs-number">1</span>, &amp;nRet);<br>  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;999 + 1 = %d\n&quot;</span>, nRet);<br>  pSuperMath-&gt;Sub(<span class="hljs-number">20</span>, <span class="hljs-number">10</span>, &amp;nRet);<br>  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;20 - 10 = %d\n&quot;</span>, nRet);<br>  CoUninitialize();<br>  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <blockquote>
 <p>方法2，使用 <code>CoCreateInstance</code>  直接产生对象（产生多个对象的时候这个函数不能使用），代码示例：</p>
 </blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-comment">// CppTest.cpp : 此文件包含 &quot;main&quot; 函数。程序执行将在此处开始并结束。</span><br><span class="hljs-comment">//</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;ISuperMath_h.h&quot;</span></span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>  CoInitialize(<span class="hljs-literal">NULL</span>);<br>  ISuperMath* pSuperMath = <span class="hljs-literal">NULL</span>;<br>  CoCreateInstance(CLSID_CSuperMath, <br>    <span class="hljs-literal">NULL</span>, CLSCTX_INPROC_SERVER, <br>    IID_ISuperMath, (<span class="hljs-keyword">void</span>**)&amp;pSuperMath);<br>  <span class="hljs-keyword">long</span> nRet = <span class="hljs-number">0</span>;<br>  pSuperMath-&gt;Add(<span class="hljs-number">999</span>, <span class="hljs-number">1</span>, &amp;nRet);<br>  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;999 + 1 = %d\n&quot;</span>, nRet);<br>  pSuperMath-&gt;Sub(<span class="hljs-number">20</span>, <span class="hljs-number">10</span>, &amp;nRet);<br>  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;20 - 10 = %d\n&quot;</span>, nRet);<br>  CoUninitialize();<br>  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br>``` <br><br>##### VB<br><br>VC <span class="hljs-number">6.0</span> 下新建VB项目，在项目中包含编译 <span class="hljs-string">&quot;**.idl**&quot;</span> 文件后生成的二进制 <span class="hljs-string">&quot;**SuperMath.tlb**&quot;</span> 文件。<br><br>![](<span class="hljs-number">12.</span>png)<br><br>在界面上放置一个按钮控件，双击控件，在对应的方法内使用即可，代码示例：<br>```VB<br><span class="hljs-function">Private Sub <span class="hljs-title">Commandl_Click</span><span class="hljs-params">()</span></span><br>    Dim obj  As New MySuperMathLib.CSuperMath<br>    MsgBox <span class="hljs-string">&quot;1 + 2 = &quot;</span> &amp; obj.Add(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>)<br></code></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-comment">// CppTest.cpp : 此文件包含 &quot;main&quot; 函数。程序执行将在此处开始并结束。</span><br><span class="hljs-comment">//</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;ISuperMath_h.h&quot;</span></span><br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>  CoInitialize(<span class="hljs-literal">NULL</span>);<br>  ISuperMath* pSuperMath = <span class="hljs-literal">NULL</span>;<br>  CoCreateInstance(CLSID_CSuperMath, <br>    <span class="hljs-literal">NULL</span>, CLSCTX_INPROC_SERVER, <br>    IID_ISuperMath, (<span class="hljs-keyword">void</span>**)&amp;pSuperMath);<br>  <span class="hljs-keyword">long</span> nRet = <span class="hljs-number">0</span>;<br>  pSuperMath-&gt;Add(<span class="hljs-number">999</span>, <span class="hljs-number">1</span>, &amp;nRet);<br>  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;999 + 1 = %d\n&quot;</span>, nRet);<br>  pSuperMath-&gt;Sub(<span class="hljs-number">20</span>, <span class="hljs-number">10</span>, &amp;nRet);<br>  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;20 - 10 = %d\n&quot;</span>, nRet);<br>  CoUninitialize();<br>  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br>``` <br><br>##### VB<br><br>VC <span class="hljs-number">6.0</span> 下新建VB项目，在项目中包含编译 <span class="hljs-string">&quot;**.idl**&quot;</span> 文件后生成的二进制 <span class="hljs-string">&quot;**SuperMath.tlb**&quot;</span> 文件。<br><br>![](<span class="hljs-number">12.</span>png)<br><br>在界面上放置一个按钮控件，双击控件，在对应的方法内使用即可，代码示例：<br>```VB<br><span class="hljs-function">Private Sub <span class="hljs-title">Commandl_Click</span><span class="hljs-params">()</span></span><br>    Dim obj  As New MySuperMathLib.CSuperMath<br>    MsgBox <span class="hljs-string">&quot;1 + 2 = &quot;</span> &amp; obj.Add(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>)<br></code></pre></td></tr></table></figure>
 <p>注意引用计数的问题。微软官方库在 new 对象的时候，引用计数就加1。<br>脚本语言重新设计的接口，不需要添加头文件。</p>
 <h3 id="ATL"><a href="#ATL" class="headerlink" title="ATL"></a>ATL</h3><p>微软提供的框架：<strong>ATL</strong>（activityx Template Library），方便写插件（导出函数，.idl、插件写入注册表等的函数都已进行封装）。自己只需要写接口实现类即可。</p>
 <h4 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h4><p>打开VS -&gt; 创建新项目 -&gt; C++ -&gt; ATL 项目：</p>
@@ -1076,7 +1076,7 @@
 <h5 id="C-1"><a href="#C-1" class="headerlink" title="C++"></a>C++</h5><p>创建对应的程序，将插件编译后对应的 “<strong>xxx_i.c</strong>“ 和 “<strong>xxx_i.h</strong>“ 文件导入到使用插件的程序中即可：</p>
 <p><img src="24.png"></p>
 <p>代码示例：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-comment">// CppTest.cpp : 此文件包含 &quot;main&quot; 函数。程序执行将在此处开始并结束。</span><br><span class="hljs-comment">//</span><br><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;ATLSuperMath_i.h&quot;</span></span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>  <span class="hljs-comment">// 方法1</span><br>  <span class="hljs-comment">//CoInitialize(NULL);</span><br>  <span class="hljs-comment">//IClassFactory* pFactory = NULL;</span><br>  <span class="hljs-comment">//HRESULT hr = CoGetClassObject(</span><br>  <span class="hljs-comment">//  CLSID_CSuperMath, CLSCTX_INPROC_SERVER,</span><br>  <span class="hljs-comment">//  NULL, IID_IClassFactory, (void**)pFactory);</span><br>  <span class="hljs-comment">//if (FAILED(hr))</span><br>  <span class="hljs-comment">//&#123;</span><br>  <span class="hljs-comment">//  return 0;</span><br>  <span class="hljs-comment">//&#125;</span><br>  <span class="hljs-comment">//ISuperMath* pSuperMath = NULL;</span><br>  <span class="hljs-comment">//pFactory-&gt;CreateInstance(NULL, IID_ISuperMath, (void**)&amp;pSuperMath);</span><br>  <br>  <span class="hljs-comment">// 方法2</span><br>  CoInitialize(<span class="hljs-literal">NULL</span>);<br>  ISuperMath* pSuperMath = <span class="hljs-literal">NULL</span>;<br>  CoCreateInstance(CLSID_SuperMath, <span class="hljs-literal">NULL</span>, <br>    CLSCTX_INPROC_SERVER, IID_ISuperMath, <br>    (<span class="hljs-keyword">void</span>**)&amp;pSuperMath);<br>  <br>  <span class="hljs-keyword">long</span> nRet = <span class="hljs-number">0</span>;<br>  pSuperMath-&gt;Add(<span class="hljs-number">999</span>, <span class="hljs-number">1</span>, &amp;nRet);<br>  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;999 + 1 = %d\n&quot;</span>, nRet);<br>  <br>  <span class="hljs-comment">// 使用 CoCreateInstance 需要手动调用 Release</span><br>  pSuperMath-&gt;Release();<br>  CoUninitialize();<br>  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-comment">// CppTest.cpp : 此文件包含 &quot;main&quot; 函数。程序执行将在此处开始并结束。</span><br><span class="hljs-comment">//</span><br><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;ATLSuperMath_i.h&quot;</span></span><br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>  <span class="hljs-comment">// 方法1</span><br>  <span class="hljs-comment">//CoInitialize(NULL);</span><br>  <span class="hljs-comment">//IClassFactory* pFactory = NULL;</span><br>  <span class="hljs-comment">//HRESULT hr = CoGetClassObject(</span><br>  <span class="hljs-comment">//  CLSID_CSuperMath, CLSCTX_INPROC_SERVER,</span><br>  <span class="hljs-comment">//  NULL, IID_IClassFactory, (void**)pFactory);</span><br>  <span class="hljs-comment">//if (FAILED(hr))</span><br>  <span class="hljs-comment">//&#123;</span><br>  <span class="hljs-comment">//  return 0;</span><br>  <span class="hljs-comment">//&#125;</span><br>  <span class="hljs-comment">//ISuperMath* pSuperMath = NULL;</span><br>  <span class="hljs-comment">//pFactory-&gt;CreateInstance(NULL, IID_ISuperMath, (void**)&amp;pSuperMath);</span><br>  <br>  <span class="hljs-comment">// 方法2</span><br>  CoInitialize(<span class="hljs-literal">NULL</span>);<br>  ISuperMath* pSuperMath = <span class="hljs-literal">NULL</span>;<br>  CoCreateInstance(CLSID_SuperMath, <span class="hljs-literal">NULL</span>, <br>    CLSCTX_INPROC_SERVER, IID_ISuperMath, <br>    (<span class="hljs-keyword">void</span>**)&amp;pSuperMath);<br>  <br>  <span class="hljs-keyword">long</span> nRet = <span class="hljs-number">0</span>;<br>  pSuperMath-&gt;Add(<span class="hljs-number">999</span>, <span class="hljs-number">1</span>, &amp;nRet);<br>  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;999 + 1 = %d\n&quot;</span>, nRet);<br>  <br>  <span class="hljs-comment">// 使用 CoCreateInstance 需要手动调用 Release</span><br>  pSuperMath-&gt;Release();<br>  CoUninitialize();<br>  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <h4 id="使用微软的智能指针加载插件"><a href="#使用微软的智能指针加载插件" class="headerlink" title="使用微软的智能指针加载插件"></a>使用微软的智能指针加载插件</h4><blockquote>
 <p><strong>CComPtr</strong> -&gt; 头文件：<strong>atlbase.h</strong></p>
@@ -1174,10 +1174,458 @@
 <p><img src="50.png"><br><img src="51.png"></p>
 ]]></content>
       <categories>
-        <category>COM</category>
+        <category>com</category>
       </categories>
       <tags>
-        <tag>跨语言插件的编写以及使用</tag>
+        <tag>跨语言插件的编写</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>16位汇编部分指令的说明及使用</title>
+    <url>/posts/d219ef16.html/</url>
+    <content><![CDATA[<h3 id="花指令"><a href="#花指令" class="headerlink" title="花指令"></a>花指令</h3><blockquote>
+<p>代码段可以存放数据（需要将数据放置到代码段末尾，同时需要将数据段切换成代码段）。这种方式可用来进行代码加密，在代码段的前面或者中间添加数据代码会被当作操作码（db 0b8h（寄存器）） – <strong>花指令（具有成本低的特点）</strong>。</p>
+</blockquote>
+<p>操作示例：</p>
+<p><img src="1.png"></p>
+<p>需要保证代码可以正常执行（跳转等），汇编代码就做到简单加密，示例如下：</p>
+<p><img src="2.png"></p>
+<p>代码示例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">  jmp LAEL1: ; 反汇编引擎可以检测到<br>  db <span class="hljs-number">0b</span>8h ; 对CPU来说不会被执行<br>LAEL1:<br>  xxx<br></code></pre></td></tr></table></figure>
+
+<p>代码执行结果没有问题，汇编代码错乱。但是上面的方法反汇编引擎可以检测到（反汇编引擎遇到跳转指令将指令到跳转目的地址间的代码当做数据，不将其当做指令），所以也可以使用下面的方法：</p>
+<p>改进上面的版本，代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">  mov ax, <span class="hljs-number">1</span><br>  mov bx, <span class="hljs-number">1</span><br>  sub ax, bx<br>  jz LAEL1 ; 概率跳转<br>  db <span class="hljs-number">0b</span>8h ; 对CPU来说不会被执行<br>LAEL1:<br>  xxx<br></code></pre></td></tr></table></figure>
+
+<p>有些反汇编引擎会模仿一堆乱算指令后的结果，判断其会不会进行跳转。后来发展到读去文件指定字节数据、接收服务器发送数据来保证一定进行跳转（反汇编引擎就不好判断），这样就做到了低成本代码加密。</p>
+<p>升级版本，在跳转指令中添加可以输出数据的代码，有使用的代码：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">  jmp LAEL1<br>  MY_MSG1  db <span class="hljs-string">&quot;Hello World!&quot;</span>, <span class="hljs-number">0</span>dh, <span class="hljs-number">0</span>ah, <span class="hljs-string">&#x27;$&#x27;</span><br>LAEL1:<br>  mov dx, offset MY_MSG1<br>  mov ah, <span class="hljs-number">09</span>h<br>  <span class="hljs-keyword">int</span> <span class="hljs-number">21</span>h<br>  xxx<br></code></pre></td></tr></table></figure>
+<p><img src="3.png"></p>
+<blockquote>
+<p>可以做个备份，修改后的文件通过debug进行反汇编分析。</p>
+</blockquote>
+<h4 id="花指令解法"><a href="#花指令解法" class="headerlink" title="花指令解法"></a>花指令解法</h4><ul>
+<li>使用花指令的程序在进行调试的时候没有效果（只适合静态观察，执行的时候和正常程序一样）。代码量多的时候，不方便调试。</li>
+<li>静态观察使用花指令的程序，发现使用花指令的位置，使用 “-u 地址”，之后的代码就显示正常，可进行调试。</li>
+<li>通用使用静态观察，观察使用花指令处的反汇编代码，观察使用花指令的内存前后数据位置，使用二进制工具就该对应的字节数（将其修改为：C3，一个字节的指令（就不在影响后面的反汇编代码） ）</li>
+</ul>
+<h3 id="汇编代码重用"><a href="#汇编代码重用" class="headerlink" title="汇编代码重用"></a>汇编代码重用</h3><blockquote>
+<p>避免程序中的代码冗余。</p>
+</blockquote>
+<h4 id="子程序指令"><a href="#子程序指令" class="headerlink" title="子程序指令"></a>子程序指令</h4><blockquote>
+<p>子程序是完成特定功能的一段程序，当主程序（调用程序）需要执行这个功能时，采用<strong>call</strong>调用指令转移到该子程序的起始处执行，当运行完子程序功能后，采用<strong>ret</strong>指令返回指令回到主程序继续执行。</p>
+</blockquote>
+<p>方法1：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">  ; 不通用，代码冗余<br>  jmp SHOW_HELLO1<br>RETURN1:<br>  ...<br>  jmp SHOW_HELLO2<br>RETURN2:<br>  ...<br>  <br>SHOW_HELLO1:<br>  mov dx, offset MY_MSG1<br>  mov ah, <span class="hljs-number">09</span>h<br>  <span class="hljs-keyword">int</span> <span class="hljs-number">21</span>h<br>  jmp RETURN1<br>SHOW_HELLO2:<br>  mov dx, offset MY_MSG1<br>  mov ah, <span class="hljs-number">09</span>h<br>  <span class="hljs-keyword">int</span> <span class="hljs-number">21</span>h<br>  jmp RETURN2<br></code></pre></td></tr></table></figure>
+
+<p>方法2：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">  ; 不通用，有一定的局限性SHOW_HELLO 内部使用了所有寄存器<br>  ; 这种方法就不能使用了<br>  mov bx, offset RETURN1<br>  jmp SHOW_HELLO<br>RETURN1:<br>  ...<br>  mov bx, offset RETURN2<br>  jmp SHOW_HELLO<br>RETURN2:<br>  ...<br>  <br>  ; 退出程序<br>  mov ax, <span class="hljs-number">4</span>c00h<br>  <span class="hljs-keyword">int</span> <span class="hljs-number">21</span>h<br>  <br>SHOW_HELLO:<br>  ; 内部使用了所有寄存器<br>  mov bx, <span class="hljs-number">0</span> <br>  mov cx, <span class="hljs-number">0</span><br>  mov si, <span class="hljs-number">0</span><br>  mov di, <span class="hljs-number">0</span><br>  mov dx, offset MY_MSG1<br>  mov ah, <span class="hljs-number">09</span>h<br>  <span class="hljs-keyword">int</span> <span class="hljs-number">21</span>h<br>  jmp bx ; bx寄存器数值被修改，跳不回去了<br></code></pre></td></tr></table></figure>
+
+<p>方法3：使用堆栈保存跳转时的地址，返回的时候进行恢复 – <strong>子程序（一段可以重复执行的代码）</strong></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">  ; 子程序<br>  mov ax, offset RETURN1<br>  push ax<br>  jmp SHOW_HELLO<br>RETURN1:<br>  mov ax, offset RETURN2<br>  push ax<br>  jmp SHOW_HELLO<br>RETURN2:<br>  <br>  ; 退出程序<br>  mov ax, <span class="hljs-number">4</span>c00h<br>  <span class="hljs-keyword">int</span> <span class="hljs-number">21</span>h<br>  <br>SHOW_HELLO:<br>  push bx<br>  mov bx, <span class="hljs-number">0</span><br>  mov cx, <span class="hljs-number">0</span><br>  mov si, <span class="hljs-number">0</span><br>  mov di, <span class="hljs-number">0</span><br>  mov dx, offset MY_MSG1<br>  mov ah, <span class="hljs-number">09</span>h<br>  <span class="hljs-keyword">int</span> <span class="hljs-number">21</span>h<br>  <br>  pop bx  ; 自己保存的，需要自己恢复<br>  pop ax<br>  jmp ax  ; 跳转到进行跳转之前保存的地址<br>  <br>MY_MSG1  db <span class="hljs-string">&quot;Hello World!&quot;</span>, <span class="hljs-number">0</span>dh, <span class="hljs-number">0</span>ah, <span class="hljs-string">&#x27;$&#x27;</span><br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>使用<strong>子程序指令：</strong> <code>call</code> 、<code>ret</code> （两个指令不影响寄存器）优化方法3：</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"> ; 子程序<br>  ;mov ax, offset RETURN1<br>  ;push ax<br>  ;jmp SHOW_HELLO<br>;RETURN1:<br>  call SHOW_HELLO ;等价上面三行代码<br>  <br>  ;mov ax, offset RETURN2<br>  ;push ax<br>  ;jmp SHOW_HELLO<br>;RETURN2:<br>  call SHOW_HELLO ;等价上面三行代码<br>  <br>  ; 退出程序<br>  mov ax, <span class="hljs-number">4</span>c00h<br>  <span class="hljs-keyword">int</span> <span class="hljs-number">21</span>h<br>  <br>SHOW_HELLO:<br>  push bx ; 在入口处保存环境<br>  mov bx, <span class="hljs-number">0</span><br>  mov cx, <span class="hljs-number">0</span><br>  mov dx, offset MY_MSG1<br>  mov ah, <span class="hljs-number">09</span>h<br>  <span class="hljs-keyword">int</span> <span class="hljs-number">21</span>h<br>  <br>  pop bx  ; 自己保存的，需要自己恢复（在ret指令执行前，恢复环境）<br>  <br>  ;pop ax<br>  ;jmp ax ; 跳转到进行跳转之前保存的地址 --&gt; pop ip<br>  ret     ; 等价上面两行汇编指令，不影响寄存器<br><br>MY_MSG1  db <span class="hljs-string">&quot;Hello World!&quot;</span>, <span class="hljs-number">0</span>dh, <span class="hljs-number">0</span>ah, <span class="hljs-string">&#x27;$&#x27;</span><br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>使用子程序指令 <code>call</code> 不需要在写标号，CPU会将下一条指令的地址存储到堆栈中（CPU执行这条指令的时候，根据指令长度可以计算处下一条指令的地址）。<strong>自己压入堆栈内的数据需要在执行 <code>ret</code> 指令之前弹出，否则栈顶的地址会当作返回地址使用。</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>注意</strong>：调用子程序之前，有进行寄存器操作，在子程序中有对寄存器复制等，退出子程序后，之前使用的寄存器数值发生变化。<br><strong>解决办法</strong>：保存寄存器环境（在子程序中入口处将子程序中使用的寄存器入栈），推出前恢复寄存器环境（ret指令执行前，将入栈的寄存器弹出），<strong>子程序中使用哪些寄存器就将哪些寄存器入栈即可。</strong><br>代码示例：</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">  mov cx, <span class="hljs-number">1</span><br>  call SHOW_HELLO<br>  mov cx, <span class="hljs-number">2</span><br>  call SHOW_HELLO<br>  mov cx, <span class="hljs-number">3</span><br>  call SHOW_HELLO<br>  <br>  ; 退出程序<br>  mov ax, <span class="hljs-number">4</span>c00h<br>  <span class="hljs-keyword">int</span> <span class="hljs-number">21</span>h<br>SHOW_HELLO:<br>  push bx  ; 保存寄存器环境<br>  push cx<br>  push si<br>  push di<br>  mov bx, <span class="hljs-number">0</span><br>  mov cx, <span class="hljs-number">0</span><br>  mov si, <span class="hljs-number">0</span><br>  mov di, <span class="hljs-number">0</span><br>  mov dx, offset MY_MSG1<br>  mov ah, <span class="hljs-number">09</span>h<br>  <span class="hljs-keyword">int</span> <span class="hljs-number">21</span>h<br>  <br>  pop bx  ; 恢复寄存器环境<br>  pop cx<br>  pop si<br>  pop di<br>  ;pop ax<br>  ;jmp ax  ; 跳转到进行跳转之前保存的地址 --&gt; pop ip<br>  ret      ; 等价上面两行汇编指令，不影响寄存器<br>MY_MSG1  db <span class="hljs-string">&quot;Hello World!&quot;</span>, <span class="hljs-number">0</span>dh, <span class="hljs-number">0</span>ah, <span class="hljs-string">&#x27;$&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><blockquote>
+<p>子程序中保存环境是函数的概念。</p>
+</blockquote>
+<p>提供子程序的通用性，去除子程序中使用固定的字符串 – <strong>给子程序添加参数</strong>。</p>
+<h5 id="给子程序添加参数"><a href="#给子程序添加参数" class="headerlink" title="给子程序添加参数"></a>给子程序添加参数</h5><blockquote>
+<p>通过寄存器传递参数（<strong>调用约定</strong>）。</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">; 堆栈段<br>MyStack segment  <span class="hljs-built_in">stack</span><br>  db <span class="hljs-number">256</span> dup(?)<br>MyStack ends<br><br>; 数据段<br>MyData segment<br>  MY_MSG1  db <span class="hljs-string">&quot;Hello World1!&quot;</span>, <span class="hljs-number">0</span>dh, <span class="hljs-number">0</span>ah, <span class="hljs-string">&#x27;$&#x27;</span><br>  MY_MSG2  db <span class="hljs-string">&quot;Hello World2!&quot;</span>, <span class="hljs-number">0</span>dh, <span class="hljs-number">0</span>ah, <span class="hljs-string">&#x27;$&#x27;</span><br>MyData ends<br><br>; 代码段<br>MyCode segment<br>MAIN:<br>  mov ax, MyData<br>  mov ds, ax<br>  mov es, ax<br>  ; 给子程序添加参数，通过寄存器传递参数<br>  mov ax, offset MY_MSG1<br>  call SHOW_HELLO<br>  mov ax, offset MY_MSG2<br>  call SHOW_HELLO<br>  mov ax, offset MY_MSG1<br>  call SHOW_HELLO<br>  <br>  ; 退出程序<br>  mov ax, <span class="hljs-number">4</span>c00h<br>  <span class="hljs-keyword">int</span> <span class="hljs-number">21</span>h<br>  <br>SHOW_HELLO:<br>  push ax  ; 保存寄存器环境<br>  push dx<br>  push cx<br>  mov cx, <span class="hljs-number">0</span><br>  mov dx, ax  ; ax 保存要输出的字符串地址<br>  mov ah, <span class="hljs-number">09</span>h<br>  <span class="hljs-keyword">int</span> <span class="hljs-number">21</span>h<br>  <br>  pop dx  ; 恢复寄存器环境<br>  pop cx<br>  pop ax<br>  ;pop ax<br>  ;jmp ax  ; 跳转到进行跳转之前保存的地址 --&gt; pop ip<br>  ret      ; 等价上面两行汇编指令，不影响寄存器<br><br>MyCode ends<br>end MAIN<br></code></pre></td></tr></table></figure>
+<p>通过寄存器传递参数（<strong>调用约定</strong>），参数少的时候可取，当传递参数较多的时候，寄存器不够用。可以使用内存（堆栈）传递参数。使用堆栈传递参数的好处：可传递参数较多，子程序使用玩，堆栈可以进行释放，达到重复使用。<strong>注意：为了参数访问时方便，参数的顺序（参数存放到栈顶访问时比较方便）需要是 “从右往左依次入栈”。</strong></p>
+<p>子程序使用参数时，需要进行计算。在call的时候，栈底保存的是返回值（入栈顺序：参数1 –&gt; 参数2 –&gt; 执行 <code>call</code> 指令，保存的是下一条指令的地址（返回地址）），所以在获取参数1：<code>[sp+2]</code>，获取参数2：<code>[sp+4]</code>。注意：sp不是基址寄存器，不能用来直接访问内存，可使用：mov bp, sp。</p>
+<blockquote>
+<p><strong>注意</strong>：跳转到子程序之前<strong>入栈的参数</strong>，在退出子程序后并不会出栈，会导致堆栈不平衡（子程序使用过多的时候会导致栈爆）。<br><strong>解决办法</strong>：<br>方法1：在退出子程序后，手动平衡对应字节数的栈空间（调用者平衡栈：C调用约定）。示例：add sp, 4<br>方法2：在子程序内部返回之前，函数自己平衡对应字节数的栈空间（函数本身进行释放栈空间：stdcall）示例：<br>pop ax ;比较低效<br>add sp, 4 ;栈顶需要是返回地址<br>push ax<br>ret       ; 等价上面两行汇编指令，不影响寄存器</p>
+</blockquote>
+<p>CPU 指令 <code>retn</code> 等价上面四行代码，效率比上面四行要高，使用示例：</p>
+<blockquote>
+<p>retn 4<br>执行mov ip, [sp]（将栈顶数据，给IP）之前，先执行add sp, 4。CPU可以做到，CPU可以将返回地址存放到暂存寄存器中。</p>
+</blockquote>
+<p>代码示例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">; 堆栈段<br>MyStack segment  <span class="hljs-built_in">stack</span><br>  db <span class="hljs-number">256</span> dup(?)<br>MyStack ends<br><br>; 数据段<br>MyData segment<br>  MY_MSG1  db <span class="hljs-string">&quot;Hello World1!&quot;</span>, <span class="hljs-number">0</span>dh, <span class="hljs-number">0</span>ah, <span class="hljs-string">&#x27;$&#x27;</span><br>  MY_MSG2  db <span class="hljs-string">&quot;Hello World2!&quot;</span>, <span class="hljs-number">0</span>dh, <span class="hljs-number">0</span>ah, <span class="hljs-string">&#x27;$&#x27;</span><br>MyData ends<br><br>; 代码段<br>MyCode segment<br>MAIN:<br>  mov ax, MyData<br>  mov ds, ax<br>  mov es, ax<br>  <br>  ; 从右往左依次入栈<br>  mov ax, <span class="hljs-number">09</span>h<br>  push ax<br>  mov ax, offset MY_MSG1  ; 调用约定 寄存器传参，注意参数顺序<br>  push ax<br>  call SHOW_HELLO<br>  ;add sp, <span class="hljs-number">4</span> ; 调用者手动平衡对应字节数的栈空间<br>  <br>  mov ax, <span class="hljs-number">09</span>h<br>  push ax<br>  mov ax, offset MY_MSG2  ; 调用约定 寄存器传参，注意参数顺序<br>  push ax<br>  call SHOW_HELLO<br>  ;add sp, <span class="hljs-number">4</span> ; 调用者手动平衡对应字节数的栈空间<br>  <br>  ; 退出程序<br>  mov ax, <span class="hljs-number">4</span>c00h<br>  <span class="hljs-keyword">int</span> <span class="hljs-number">21</span>h<br>  <br>SHOW_HELLO:<br>  push ax  ; 保存寄存器环境<br>  push dx    <br>  push cx<br>  <br>  ;获取参数<span class="hljs-number">1</span>：[sp+<span class="hljs-number">2</span>]<br>  ;获取参数<span class="hljs-number">2</span>：[sp+<span class="hljs-number">4</span>]<br>  mov bp, sp      ; sp不是基址寄存器，不能用来直接访问内存<br>  mov cx, <span class="hljs-number">0</span><br>  mov dx, word ptr[bp+<span class="hljs-number">8</span>]  ; [sp+<span class="hljs-number">8</span>]:子程序入口有三个push<br>  mov ah, byte ptr[bp+<span class="hljs-number">10</span>]<br>  <span class="hljs-keyword">int</span> <span class="hljs-number">21</span>h<br>  <br>  pop dx  ; 恢复寄存器环境<br>  pop cx<br>  pop ax<br>  ;pop ax<br>  ;jmp ax  ; 跳转到进行跳转之前保存的地址 --&gt; pop ip、<br>  <br>  ;pop ax<br>  ;add sp, <span class="hljs-number">4</span>  ; 栈顶需要是返回地址<br>  ;push ax<br>  ;ret      ; 等价pop ax、jmp ax，不影响寄存器<br>  retn <span class="hljs-number">4</span>    ; 函数内部自动平衡栈<br>MyCode ends<br>end MAIN<br></code></pre></td></tr></table></figure>
+<p><img src="4.png"></p>
+<h5 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h5><p>上面的代码还有需要改进的地方，就是当子程序中，右新的寄存器需要入栈，那么调用参数的部分就需要改动。代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">SHOW_HELLO:<br>  push ax  ; 保存寄存器环境<br>  push dx    <br>  push cx<br>  <br>  ;获取参数<span class="hljs-number">1</span>：[sp+<span class="hljs-number">2</span>]<br>  ;获取参数<span class="hljs-number">2</span>：[sp+<span class="hljs-number">4</span>]<br>  mov bp, sp      ; sp不是基址寄存器，不能用来直接访问内存<br>  mov cx, <span class="hljs-number">0</span><br>  mov dx, word ptr[bp+<span class="hljs-number">8</span>]  ; [sp+<span class="hljs-number">8</span>]:子程序入口有三个push<br>  mov ah, byte ptr[bp+<span class="hljs-number">10</span>] ; 上下两句都需要改动<br>  <span class="hljs-keyword">int</span> <span class="hljs-number">21</span>h<br>  <br>  pop cx  ; 恢复寄存器环境<br>  pop dx<br>  pop ax<br>  retn <span class="hljs-number">4</span>    ; 函数内部自动平衡栈<br></code></pre></td></tr></table></figure>
+<p>对上面的代码进行修改：入口处<strong>保存栈底（可使访问参数时偏移固定）</strong></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">SHOW_HELLO:<br>  mov bp, sp      ; sp不是基址寄存器，不能用来直接访问内存<br>  ;防止在调用子程序之前 bp寄存器被使用，应将其入栈<br>  push bp<br>  push ax  ; 保存寄存器环境<br>  push dx    <br>  push cx<br>  <br>  ;获取参数<span class="hljs-number">1</span>：[sp+<span class="hljs-number">2</span>]<br>  ;获取参数<span class="hljs-number">2</span>：[sp+<span class="hljs-number">4</span>]<br>  mov cx, <span class="hljs-number">0</span><br>  mov dx, word ptr[bp+<span class="hljs-number">2</span>]  ; [sp+<span class="hljs-number">8</span>]:子程序入口有三个push<br>  mov ah, byte ptr[bp+<span class="hljs-number">4</span>] ; 上下两句都需要改动<br>  <span class="hljs-keyword">int</span> <span class="hljs-number">21</span>h<br>  <br>  pop cx  ; 恢复寄存器环境<br>  pop dx<br>  pop ax<br>  pop bp<br>  <br>  retn <span class="hljs-number">4</span>    ; 函数内部自动平衡栈<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>访问栈时，通常使用 bp（其保存的的时当前段的栈低，保存sp的值，不是最初原始的栈底），为了使栈底固定，方便访问。<br>子程序入口，出口尽量使用固定的格式，方便访问参数，退出时保证堆栈平衡。同时还需要保存寄存器环境（防止子程序内部使用了寄存器影响外面对应的寄存器）。由于能用的通用寄存器不多，在没有空闲寄存器使用的，可将值保存到栈中。</p>
+</blockquote>
+<p>局部变量的访问地址固定问题，需要依次满足下面步骤：</p>
+<ol>
+<li>保存栈底</li>
+<li>保存局部变量（手动申请局部变量空间）</li>
+<li>保存寄存器环境</li>
+<li>恢复寄存器环境</li>
+<li>释放局部变量空间（不需要计算局部变量空间大小：mov sp, bp）</li>
+<li>恢复栈底</li>
+</ol>
+<p><strong>一个函数完整的写法</strong>，代码示例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">;----------------------------------<br>;   两数相加<br>;-----------------------------------<br>MY_ADD:<br>  ; <span class="hljs-number">1.</span> 保存栈底<br>  push bp<br>  mov bp, sp<br>  <br>  ; 在没有空闲寄存器使用的，可将值保存到栈中<br>  ; 避免大量使用push pop，可手动抬栈<br>  ; 在保存寄存器环境之前抬栈，可使局部变量访问地址固定<br>  ; <span class="hljs-number">2.</span> 固定局部变量位置<br>  sub sp, <span class="hljs-number">4</span>    ; 手动抬栈，类似申请局部变量<br>  <br>  ; <span class="hljs-number">3.</span> 保存寄存器环境<br>  push bx      ; ax作为保存返回值的寄存器，不在需要保存环境<br>  <br>  mov ax, [bp+<span class="hljs-number">4</span>]<br>  mov [bp<span class="hljs-number">-2</span>], ax  ; 保存临时数据(第一个局部变量)<br>  add ax, [bp+<span class="hljs-number">6</span>]<br>  mov [bp<span class="hljs-number">-4</span>], ax  ; 保存临时数据(第二个局部变量)<br>  ;mov [sp], ax<br>  <br>  ; <span class="hljs-number">4.</span> 释放寄存器环境<br>  pop bx<br>  <br>  ; <span class="hljs-number">5.</span> 释放局部变量<br>  ;add sp, <span class="hljs-number">4</span>    ; 释放栈(类似释放局部变量)<br>  mov sp, bp  ; 释放局部变量空间(不需要计算局部变量空间大小)<br>  <br>  ; <span class="hljs-number">6.</span> 恢复栈底<br>  pop bp<br>  retn <span class="hljs-number">4</span><br></code></pre></td></tr></table></figure>
+
+<h5 id="返回值（保存运算结果）"><a href="#返回值（保存运算结果）" class="headerlink" title="返回值（保存运算结果）"></a>返回值（保存运算结果）</h5><p>方法1（比较麻烦）：</p>
+<ul>
+<li>可以在子程序外申请一个局部变量</li>
+<li>将局部变量作为参数传到子程序中</li>
+<li>将运算结果保存到该局部变量中并返回</li>
+</ul>
+<p>方法2（返回值使用一个寄存器保存）：</p>
+<ul>
+<li>需要提前约定好，一般使用寄存器 ax</li>
+<li>使用 ax 作为保存返回值的寄存器，寄存器ax 在子程序中就不需要保存环境</li>
+</ul>
+<h5 id="段间子程序调用"><a href="#段间子程序调用" class="headerlink" title="段间子程序调用"></a>段间子程序调用</h5><p>自动切换段（cs）：call far ptr MY_SUB<br>自动恢复段（cs）：retf</p>
+<blockquote>
+<p>切换段之前，将之前的CS和IP保存到堆栈中（便于恢复段）。所以访问参数时，需要[bp+6]；跨段访问的函数，在其段中，有想访问其子程序时在使用 <code>call</code> 就不通用，通用需要使用 <code>call far ptr</code>。需要提前确定是：<strong>段间子程序</strong> 还是 <strong>段内子程序</strong>。</p>
+</blockquote>
+<p>代码示例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">;----------------------------------<br>;   堆栈段<br>;----------------------------------<br>MyStack segment  <span class="hljs-built_in">stack</span><br>  db <span class="hljs-number">256</span> dup(?)<br>MyStack ends<br><br>;----------------------------------<br>;   数据段<br>;----------------------------------<br>MyData segment<br>  MY_MSG1  db <span class="hljs-string">&quot;Hello World1!&quot;</span>, <span class="hljs-number">0</span>dh, <span class="hljs-number">0</span>ah, <span class="hljs-string">&#x27;$&#x27;</span><br>  MY_MSG2  db <span class="hljs-string">&quot;Hello World2!&quot;</span>, <span class="hljs-number">0</span>dh, <span class="hljs-number">0</span>ah, <span class="hljs-string">&#x27;$&#x27;</span><br>MyData ends<br><br>;----------------------------------<br>;   段间子程序<br>;----------------------------------<br>MyCode2 segment<br>  call far ptr MY_SUB ; 不使用far ptr，段内访问子程序，获取的参数地址不对<br>MY_SUB:<br>  push bp<br>  mov bp, sp  ;保存栈底<br>  <br>  ; 返回值保存到ax中<br>  ; 切换段之前，将之前的CS和IP保存到堆栈中（便于恢复段）<br>  mov ax, [bp+<span class="hljs-number">6</span>]  ; 所以访问参数<span class="hljs-number">1</span>时需要 +<span class="hljs-number">6</span><br>  sub ax, [bp+<span class="hljs-number">8</span>]<br>  <br>  pop bp      ; 恢复栈底<br>  retf <span class="hljs-number">4</span><br>MyCode2 ends<br><br>;----------------------------------<br>;   代码段<br>;----------------------------------<br>MyCode segment<br>MAIN:<br>  mov ax, MyData<br>  mov ds, ax<br>  mov es, ax<br>  ; 段间(跨段)子程序访问<br>  mov ax, <span class="hljs-number">1</span><br>  push ax<br>  mov ax, <span class="hljs-number">2</span><br>  push ax<br>  call far ptr MY_SUB<br>MyCode ends<br>end MAIN<br></code></pre></td></tr></table></figure>
+<p><img src="5.png"></p>
+<h3 id="中断指令"><a href="#中断指令" class="headerlink" title="中断指令"></a>中断指令</h3><blockquote>
+<p>中断（Interrupt）是又一种改变程序执行顺序的方法。</p>
+</blockquote>
+<p>中断请求可以来自处理器外部的中断源，也可以由处理器执行指令引起。</p>
+<h4 id="INT"><a href="#INT" class="headerlink" title="INT"></a>INT</h4><blockquote>
+<p>int 21H：Dos功能调用（会打断正在执行的代码），21h号中断是 DOS 提供给用户的用于调用系统功能的中断，它有近百个功能供用户选择使用，主要包括设备管理、目录管理和文件管理三个方面的功能。</p>
+</blockquote>
+<p>中断表（由CPU规定）在内存中，地址是固定的，int 21h（操作系统从中断表中取出地址并调用）</p>
+<p>中断函数的返回指令：<strong>iret</strong></p>
+<h3 id="处理器控制类指令"><a href="#处理器控制类指令" class="headerlink" title="处理器控制类指令"></a>处理器控制类指令</h3><h4 id="对标志位进行设置的指令"><a href="#对标志位进行设置的指令" class="headerlink" title="对标志位进行设置的指令"></a>对标志位进行设置的指令</h4><h5 id="进位标志操作指令"><a href="#进位标志操作指令" class="headerlink" title="进位标志操作指令"></a>进位标志操作指令</h5><blockquote>
+<p>对标志位进行设置的指令（清除、设置等标志位）</p>
+</blockquote>
+<ul>
+<li>clc（复位进位标志）： CF = 0</li>
+<li>stc（置位进位标志）：CF = 1</li>
+<li>cmc（求反进位标志）：CF = ~CF</li>
+</ul>
+<h5 id="方向标志操作指令"><a href="#方向标志操作指令" class="headerlink" title="方向标志操作指令"></a>方向标志操作指令</h5><blockquote>
+<p>一般在串操作指令中，进行使用。</p>
+</blockquote>
+<ul>
+<li>cld（复位方向标志）：DF = 0</li>
+<li>std（置位方向标志）：DF = 1</li>
+</ul>
+<h5 id="中断标志操作指令"><a href="#中断标志操作指令" class="headerlink" title="中断标志操作指令"></a>中断标志操作指令</h5><blockquote>
+<p>在编写中断服务程序时，需要控制可屏蔽中断的允许和禁止。</p>
+</blockquote>
+<ul>
+<li>cli（复位中断标志）：IF = 0</li>
+<li>sti（置位中断标志）：IF = 1</li>
+</ul>
+<h4 id="对CPU-状态进行控制的指令"><a href="#对CPU-状态进行控制的指令" class="headerlink" title="对CPU 状态进行控制的指令"></a>对CPU 状态进行控制的指令</h4><blockquote>
+<p>nop、lock</p>
+</blockquote>
+<h5 id="空操作指令-nop"><a href="#空操作指令-nop" class="headerlink" title="空操作指令 nop"></a>空操作指令 nop</h5><blockquote>
+<p>CPU不执行任何操作，但占用一个字节存储单元，空耗一个指令执行周期（指令周期：3）。操作码：90H（NOP和XCHG AX,AX的指令代码一样，都是 90H），常用来替换花指令。</p>
+</blockquote>
+<p>执行一条nop指令等价执行一条add（加法）指令。在代码段开始处定义数据会被当做操作码，可用nop的操作码进行填充。填充后就可以被当作代码执行。</p>
+<blockquote>
+<p>db 20 dmp(90h)</p>
+</blockquote>
+<p>NOP常用于程序调试：</p>
+<ul>
+<li>在需要预留指令空间时用NOP填充</li>
+<li>代码空间多余时也可以用NOP填充</li>
+<li>还可以用NOP实现软件延时</li>
+</ul>
+<h5 id="段超越前缀指令"><a href="#段超越前缀指令" class="headerlink" title="段超越前缀指令"></a>段超越前缀指令</h5><blockquote>
+<p>在允许段超越的存储器操作数之前，使用段超越前缀指令，将采用指定的段寄存器寻址操作数（操作内存时，需要添加段前缀）。</p>
+</blockquote>
+<ul>
+<li>CS：使用代码段的数据</li>
+<li>SS：使用堆栈段的数据</li>
+<li>DS：使用数据段的数据</li>
+<li>ES：使用附加段的数据</li>
+</ul>
+<h5 id="封锁前缀指令-lock"><a href="#封锁前缀指令-lock" class="headerlink" title="封锁前缀指令 lock"></a>封锁前缀指令 lock</h5><blockquote>
+<p>lock：封锁总线<br>示例：lock inc word ptr ds:[1000]<br>类似：<strong>InterlockedInceement</strong></p>
+</blockquote>
+<p>这是一个指令前缀，可放在任何指令前。这个前缀使得在这个指令执行时间内，8086 处理器的封锁输出引脚有效，即把总线封锁（CPU接收不到任何电信号），使别的控制器不能控制总线；直到该指令执行完后，总线封锁解除（当两个程序操作同一块内存时就存在同步问题）。</p>
+<blockquote>
+<p>缺点：一条指令只能同步一行代码。</p>
+</blockquote>
+<h5 id="暂停指令-hlt"><a href="#暂停指令-hlt" class="headerlink" title="暂停指令 hlt"></a>暂停指令 hlt</h5><p>长时间不去操作操作系统的话，CPU就会进入暂停状态。</p>
+<blockquote>
+<p>HLT：CPU就会进入暂停状态（暂停工作），可以降低电损耗。</p>
+</blockquote>
+<ul>
+<li>暂停指令使CPU进入暂停状态，这时CPU不进行任何操作。当CPU发生复位或来自外部的中断时，CPU脱离暂停状态。</li>
+<li>HLT指令可用于程序中等待中断。当程序中必须等待中断时，可用HLT，而不必用软件死循环。然后，中断使CPU脱离暂停状态，返回执行HLT的下一条指令。</li>
+</ul>
+<h5 id="交权指令-esc"><a href="#交权指令-esc" class="headerlink" title="交权指令 esc"></a>交权指令 esc</h5><p>处理浮点数运算的时候，CPU不会计算，这是CPU会将浮点指令交给浮点处理器执行。这时CPU会等待浮点处理器运算后的结果。</p>
+<blockquote>
+<p>esc 6位立即数, reg/mem</p>
+</blockquote>
+<ul>
+<li>浮点协处理器8087指令是与8086的整数指令组合在一起的，当8086发现是一条浮点指令时，就利用ESC指令将浮点指令交给8087执行；</li>
+<li>实际编写程序时，一般采用易于理解的浮点指令助记符格式。<br>esc 6, [si] ;实数除法指令：fdiv dword ptr [si]<br>esc 20h, al ;整数加法指令：fadd st(0),st</li>
+</ul>
+<h5 id="等待指令-wait"><a href="#等待指令-wait" class="headerlink" title="等待指令 wait"></a>等待指令 wait</h5><blockquote>
+<p>wait：进入等待状态</p>
+</blockquote>
+<ul>
+<li>8086利用wait指令和测试引脚实现与8087（浮点协处理器）同步运行；</li>
+<li>浮点指令经由8086处理发往8087，并与8086本身的整数指令在同一个指令序列；而8087执行浮点指令较慢，所以8086必须与8087保持同步；</li>
+</ul>
+<h3 id="位操作类指令"><a href="#位操作类指令" class="headerlink" title="位操作类指令"></a>位操作类指令</h3><p>位操作类指令以二进制位为基本单位进行数据的操作（常用指令）。</p>
+<h4 id="逻辑运算指令"><a href="#逻辑运算指令" class="headerlink" title="逻辑运算指令"></a>逻辑运算指令</h4><blockquote>
+<p>AND、OR、XOR、NOT、TEST</p>
+</blockquote>
+<h5 id="逻辑与指令-and"><a href="#逻辑与指令-and" class="headerlink" title="逻辑与指令 and"></a>逻辑与指令 and</h5><blockquote>
+<p>对两个操作数执行逻辑与运算，结果送到目的操作数。只有相 “与” 的两位都是1，结果才是1；否则，”与” 的结果为0。</p>
+</blockquote>
+<p>and reg, imm/reg/mem ;reg &lt;– reg^imm/reg/mem<br>and mem, imm/reg ;mem &lt;– mem^imm/reg</p>
+<p>AND指令设置CF = OF = 0，根据结果设置SF、ZF和PF状态，而对AF未定义。</p>
+<p>代码示例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">mov ax, <span class="hljs-number">-1</span><br><span class="hljs-keyword">and</span> ax, <span class="hljs-number">8000</span>h   ; 除最高位，其它位全部置<span class="hljs-number">0</span><br><br>mov al,<span class="hljs-number">45</span>h  ; 逻辑与 al=<span class="hljs-number">01</span>h<br><span class="hljs-keyword">and</span> al,<span class="hljs-number">31</span>h  ; CF = OF = <span class="hljs-number">0</span>，SF = <span class="hljs-number">0</span>、ZF = <span class="hljs-number">0</span>、PF = <span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
+
+<h5 id="逻辑或指令-or"><a href="#逻辑或指令-or" class="headerlink" title="逻辑或指令 or"></a>逻辑或指令 or</h5><blockquote>
+<p>对两个操作数执行逻辑或运算，结果送到目的操作数。只要相 “或” 的两位有一位是1，结果就是1；否则，结果为0。</p>
+</blockquote>
+<p>or reg, imm/reg/mem ;reg &lt;– reg∨imm/reg/mem<br>or mem, imm/reg ;mem &lt;– mem∨imm/reg</p>
+<p>or指令设置CF = OF = 0，根据结果设置SF、ZF和PF状态，而对AF未定义。</p>
+<p>代码示例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">mov ax, <span class="hljs-number">-1</span><br><span class="hljs-keyword">and</span> ax, <span class="hljs-number">8000</span>h   ; 除最高位，其它位全部置<span class="hljs-number">0</span><br><span class="hljs-keyword">or</span> ax, <span class="hljs-number">1</span>   ; 最低位置<span class="hljs-number">1</span><br><br>mov al,<span class="hljs-number">45</span>h  ; 逻辑或 al=<span class="hljs-number">75</span>h<br><span class="hljs-keyword">or</span> al,<span class="hljs-number">31</span>h   ; CF = OF = <span class="hljs-number">0</span>，SF = <span class="hljs-number">0</span>、ZF = <span class="hljs-number">0</span>、PF = <span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
+
+<h5 id="逻辑异或指令-xor"><a href="#逻辑异或指令-xor" class="headerlink" title="逻辑异或指令 xor"></a>逻辑异或指令 xor</h5><blockquote>
+<p>对两个操作数执行逻辑异或运算，结果送到目的操作数。只有相 “异或” 的两位不相同，结果就是1；否则，结果为0。</p>
+</blockquote>
+<p>xor reg, imm/reg/mem ;reg &lt;– reg⊕imm/reg/mem<br>xor mem, imm/reg ;mem &lt;– mem⊕imm/reg</p>
+<p>xor指令设置CF = OF = 0，根据结果设置SF、ZF和PF状态，而对AF未定义。</p>
+<p>代码示例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">mov ax, <span class="hljs-number">-1</span><br><span class="hljs-keyword">and</span> ax, <span class="hljs-number">8000</span>h   ; 除最高位，其它位全部置<span class="hljs-number">0</span><br><span class="hljs-keyword">or</span> ax, <span class="hljs-number">1</span>   ; 最低位置<span class="hljs-number">1</span><br><span class="hljs-keyword">xor</span> ax, <span class="hljs-number">0f</span>h ; 低<span class="hljs-number">4</span>位取反<br><span class="hljs-keyword">not</span> ax ; 所有位都取反<br><br>mov al,<span class="hljs-number">45</span>h  ; 逻辑异或 al=<span class="hljs-number">74</span>h<br><span class="hljs-keyword">xor</span> al,<span class="hljs-number">31</span>h  ; CF = OF = <span class="hljs-number">0</span>，SF = <span class="hljs-number">0</span>、ZF = <span class="hljs-number">0</span>、PF = <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
+
+<h5 id="逻辑非指令-not"><a href="#逻辑非指令-not" class="headerlink" title="逻辑非指令 not"></a>逻辑非指令 not</h5><blockquote>
+<p>对一个操作数执行逻辑非运算。按位取反，原来是 “0” 的位变为 “1”，原来是 “1” 的位变为 “0”。not指令是一个单操作数指令，not指令不影响标志位。</p>
+</blockquote>
+<p>语法：</p>
+<ul>
+<li>not reg/mem ；reg/mem &lt;– ～reg/mem</li>
+</ul>
+<p>代码示例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">mov al,<span class="hljs-number">45</span>h  ; 逻辑非 al=<span class="hljs-number">0b</span>ah<br><span class="hljs-keyword">not</span> al  ; 标志不变<br></code></pre></td></tr></table></figure>
+
+<h5 id="测试指令-test"><a href="#测试指令-test" class="headerlink" title="测试指令 test"></a>测试指令 test</h5><blockquote>
+<p>对两个操作数执行逻辑与运算，结果不回送到目的操作数（test 只影响标志位）。只有相 “与” 的两位都是1，结果才是1；否则，”与” 的结果为 0。</p>
+</blockquote>
+<p>比较操作数的最低位（二进制位）是否为1，使用 and 会影响目的操作数的值，这个时候就可以使用 test 指令。</p>
+<p>代码示例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">and</span> ax, <span class="hljs-number">1</span> ; 影响目的操作数<br>;jz xxx<br><br>test ax, <span class="hljs-number">1</span> ; ax &amp;<span class="hljs-number">1</span> --&gt; 不影响目的操作数，只影响标志位<br><br>; 测试寄存器值是否为<span class="hljs-number">1</span><br>cmp ax, <span class="hljs-number">0</span> ; <span class="hljs-number">4</span>个指令周期<br>test ax, ax ; <span class="hljs-number">3</span>个指令周期 这样写只能判断是否为 <span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="移位指令"><a href="#移位指令" class="headerlink" title="移位指令"></a>移位指令</h4><blockquote>
+<p>SHL  SHR  SAR</p>
+</blockquote>
+<p>将操作数移动一位或多位，分成逻辑移位和算术移位，分别具有左移或右移操作（有无符号）。</p>
+<p>有符号右移时：负数高位补1，正数补0。<br>无符号右移时：负数高位补0，正数补0。</p>
+<h5 id="逻辑左移-shl"><a href="#逻辑左移-shl" class="headerlink" title="逻辑左移 shl"></a>逻辑左移 shl</h5><blockquote>
+<p>无符号，低位补0</p>
+</blockquote>
+<p>代码示例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">mov ax, <span class="hljs-number">-1</span><br>shl ax, <span class="hljs-number">1</span> ;<span class="hljs-number">1</span>为移动的次数<br>ax = ffff<br>ax = fffe<br></code></pre></td></tr></table></figure>
+
+<h5 id="逻辑右移-shr"><a href="#逻辑右移-shr" class="headerlink" title="逻辑右移 shr"></a>逻辑右移 shr</h5><blockquote>
+<p>无符号，高位补0</p>
+</blockquote>
+<p>代码示例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">mov ax, <span class="hljs-number">-1</span><br>shl ax, <span class="hljs-number">1</span> ;<span class="hljs-number">1</span>为移动的次数<br>shr ax, <span class="hljs-number">1</span><br>ax = ffff<br>ax = fffe<br>ax = <span class="hljs-number">7f</span>fe<br></code></pre></td></tr></table></figure>
+
+<h5 id="算数左移-sal"><a href="#算数左移-sal" class="headerlink" title="算数左移 sal"></a>算数左移 sal</h5><blockquote>
+<p>有符号，低位补0。算数左移 sal 和 逻辑左移 shl 操作码以及结果都一样。</p>
+</blockquote>
+<p>代码示例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">mov ax, <span class="hljs-number">-1</span><br>sal ax, <span class="hljs-number">1</span> ;<span class="hljs-number">1</span>为移动的次数<br>ax = ffff<br>ax = fffe<br></code></pre></td></tr></table></figure>
+
+<h5 id="算数右移-sar"><a href="#算数右移-sar" class="headerlink" title="算数右移 sar"></a>算数右移 sar</h5><blockquote>
+<p>有符号，高位补符号位1</p>
+</blockquote>
+<p>代码示例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">mov ax, <span class="hljs-number">0f</span>h<br>sar ax, <span class="hljs-number">1</span><br>ax = <span class="hljs-number">000f</span>h<br>ax = <span class="hljs-number">0007</span>h<br></code></pre></td></tr></table></figure>
+
+<h5 id="移位指令的操作数"><a href="#移位指令的操作数" class="headerlink" title="移位指令的操作数"></a>移位指令的操作数</h5><ul>
+<li>移位指令的第一个操作数是指定的被移位的操作数，可以是寄存器或存储单元；</li>
+<li>后一个操作数表示移位位数，该操作数为1，表示移动一位；当移位位数大于1时，则用cl寄存器值表示，该操作数表达为cl。<br>mov ax, -1<br>mov cl, 10<br>shl ax, cl ;cl中存放移动的次数</li>
+</ul>
+<h5 id="移位指令对标志的影响"><a href="#移位指令对标志的影响" class="headerlink" title="移位指令对标志的影响"></a>移位指令对标志的影响</h5><ul>
+<li>按照移入的位设置进位标志CF；</li>
+<li>根据移位后的结果影响SF、ZF、PF；</li>
+<li>对AF没有定义；</li>
+<li>如果进行一位移动，则按照操作数的最高符号位是否改变，相应设置溢出标志OF：如果移位前的操作数最高位与移位后操作数的最高位不同（有变化），则OF = 1；否则OF = 0。当移位次数大于1时，OF不确定。</li>
+</ul>
+<p><img src="6.png"></p>
+<h4 id="循环移位指令"><a href="#循环移位指令" class="headerlink" title="循环移位指令"></a>循环移位指令</h4><blockquote>
+<p>ROL、ROR、RCL、RCR（带进位循环移位（左移、右移）和不带进位循环移位（左移、右移））</p>
+</blockquote>
+<p>将操作数从一端移出的位返回到另一端形成循环，分成不带进位和带进位，分别具有左移或右移操作。</p>
+<p>mov ax, 1234h ;源操作数的高8位和低8位进行交换（这个时候就可以使用循环移位）</p>
+<p>语法格式示例：</p>
+<ul>
+<li>rol reg/mem,1/cl ;不带进位循环左移</li>
+<li>ror reg/mem,1/cl ;不带进位循环右移</li>
+<li>rcl reg/mem,1/cl ;带进位循环左移</li>
+<li>rcr reg/mem,1/cl ;带进位循环右移</li>
+</ul>
+<h5 id="不带进位的循环左移-rol"><a href="#不带进位的循环左移-rol" class="headerlink" title="不带进位的循环左移 rol"></a>不带进位的循环左移 rol</h5><blockquote>
+<p>操作数最左边的位移动到最右边</p>
+</blockquote>
+<h5 id="不带进位的循环右移-ror"><a href="#不带进位的循环右移-ror" class="headerlink" title="不带进位的循环右移 ror"></a>不带进位的循环右移 ror</h5><blockquote>
+<p>操作数最右边的位移动到最左边</p>
+</blockquote>
+<p>代码示例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">mov ax, <span class="hljs-number">1234</span>h<br>mov cl, <span class="hljs-number">8</span><br>rol ax, cl ;<span class="hljs-number">3412</span>h<br>ror ax, cl ;<span class="hljs-number">1234</span>h<br></code></pre></td></tr></table></figure>
+
+<p><img src="7.png"></p>
+<h5 id="带进位的循环右移-rcr"><a href="#带进位的循环右移-rcr" class="headerlink" title="带进位的循环右移 rcr"></a>带进位的循环右移 rcr</h5><blockquote>
+<p>操作数最低位位移动到CF标志位中，在将原来CF标志位中的数给操作数的在最高位。</p>
+</blockquote>
+<h5 id="带进位的循环左移-rcl"><a href="#带进位的循环左移-rcl" class="headerlink" title="带进位的循环左移 rcl"></a>带进位的循环左移 rcl</h5><blockquote>
+<p> 操作数最高位位移动到CF标志位中，在将原来CF标志位中的数给操作数的在最低位。</p>
+</blockquote>
+<p>对一个32位数左移2位（用两个寄存器表示32位数），两个16进制数不同同时左移，同时左移只有一个CF，低16位的最高位或者高16位的最高位有一位会丢失。这个时候就需要使用 逻辑左移（shl）和 带进位的循环左移（rcl） 配合使用。</p>
+<ul>
+<li>低16位的最高位进行逻辑左移先移动，移动出来的数据保存到CF中；</li>
+<li>高16位的最高位进行带进位的循环左移，CF中原来的数据会保存到最高16位的最低位，最高16位的最高位数据保存到CF中。<br>代码示例：<br>mov ax, 0ffffh ;低16位<br>mov bx, 0ffffh ;高16位<br>shl ax, 1<br>crl bx, 1<br>shl ax, 1<br>crl bx, 1</li>
+</ul>
+<p><img src="8.png"></p>
+<h3 id="串操作类指令"><a href="#串操作类指令" class="headerlink" title="串操作类指令"></a>串操作类指令</h3><blockquote>
+<p>CPU 提供了一些快速访问内存进行拷贝数据的指令，只需要告诉CPU需要拷贝数据的地址（偏移CPU会自动计算）以及拷贝次数。接下来由CPU自动操作（无分支，拷贝时不需要跳转，拷贝指令是一条指令，可重复执行）。</p>
+</blockquote>
+<ul>
+<li>串操作指令是8086指令系统中比较独特的一类指令，采用比较特殊的数据串寻址方式，在操作主存连续区域的数据时，特别好用、因而常用。</li>
+<li>重点指令：MOVS 、STOS 、LODS、CMPS、SCAS、REP</li>
+</ul>
+<h4 id="串数据类型"><a href="#串数据类型" class="headerlink" title="串数据类型"></a>串数据类型</h4><ul>
+<li>串操作指令的操作数是主存中连续存放的数据串（String）–即在连续的主存区域中，字节或字的序列</li>
+<li>串操作指令的操作对象是以字（w）为单位的字串，或是以字节（b）为单位的字节串。</li>
+</ul>
+<h4 id="串寻址方式"><a href="#串寻址方式" class="headerlink" title="串寻址方式"></a>串寻址方式</h4><ol>
+<li>源操作数用寄存器si寻址，默认在数据段ds中，但允许段超越：ds:[si]，拷贝数据后si自动增加（增加的数值为每次拷贝的字节数）。</li>
+<li>目的操作数用寄存器di寻址，默认在附加段es中，不允许段超越：es:[di]，拷贝数据后di自动增加（增加的数值为每次拷贝的字节数）。</li>
+<li>每执行一次串操作指令，SI和DI将自动修改：<ul>
+<li>±1（对于字节串）或±2（对于字串）</li>
+<li>执行指令CLD指令后，DF = 0，地址指针增1或2</li>
+<li>执行指令STD指令后，DF = 1，地址指针减1或2</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>代码段开始处设置了ds、es数值，所以在使用时就不用在设置了。</p>
+</blockquote>
+<h4 id="串传送-movs"><a href="#串传送-movs" class="headerlink" title="串传送 movs"></a>串传送 movs</h4><blockquote>
+<p>把字节或字操作数从主存的源地址传送至目的地址（没有操作数）。</p>
+</blockquote>
+<ul>
+<li>movsb：拷贝1个字节</li>
+<li>movsw：拷贝2个字节</li>
+<li>movsd：拷贝4个字节（80386CPU及以上）</li>
+</ul>
+<h4 id="重复前缀指令-rep"><a href="#重复前缀指令-rep" class="headerlink" title="重复前缀指令 rep"></a>重复前缀指令 rep</h4><blockquote>
+<p>串操作指令执行一次，仅对数据串中的一个字节或字量进行操作。但是串操作指令前，都可以加一个重复前缀，实现串操作的重复执行。重复次数隐含在cx寄存器中。</p>
+</blockquote>
+<p>重复前缀分2类，3条指令（rep、repz、repnz）：</p>
+<ul>
+<li>配合不影响标志的movs、stos（和lods）指令的rep前缀；</li>
+<li>配合影响标志的cmps和scas指令的repz和repnz前缀。</li>
+</ul>
+<p>使用示例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">; 给方向标志位<br>cld ; 置DF = <span class="hljs-number">0</span>，IP递增 <span class="hljs-built_in">std</span>--递减<br><br>; 拷贝<span class="hljs-number">11</span>个字节<br>mov ax, <span class="hljs-number">11</span><br>mov bx, <span class="hljs-number">2</span><br>div bx<br>mov cx, ax  ; 根据商进行循环<br>mov si, offset MY_MSG1  ; ds:[si] -- 源操作数<br>mov di, offset MY_MSG1  ; es:[di] -- 目的操作数<br>rep movsw  ; 拷贝<span class="hljs-number">6</span>字节（指令执行时IP不会增加，内部执行<span class="hljs-number">10</span>次movsw后IP会增加）<br>; 拷贝余数（<span class="hljs-number">1</span>或者<span class="hljs-number">0</span>）<br>mov cx, dx  ; 处理余数字节<br>rep movsb<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>求任何十进制数的余数等价于获取其个位数（处理10或者10的倍数）。<br>求任何十进制数的余数等价于获取<strong>这个数对应的二进制数的最低位</strong>（1或者0）。<br>示例1：10（余数：10 / 10 = 0）、11（余数：11 / 10 = 1）<br>示例2：4（对应二进制：100 余数：0）、3（对应二进制：11 余数：1）</p>
+</blockquote>
+<p>从数学角度对上面的代码进行优化（指令周期上优化）：<strong>拷贝字数为正数的前提下</strong></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">; 给方向标志位<br>cld ; 置DF = <span class="hljs-number">0</span>，IP递增 <span class="hljs-built_in">std</span>--递减<br><br>; 拷贝<span class="hljs-number">10</span>个字节 <br>mov ax, <span class="hljs-number">10</span><br>mov si, offset MY_MSG1  ;ds:[si] -- 源操作数<br>mov di, offset MY_MSG1  ;es:[di] -- 目的操作数<br>rep movsw  ; 拷贝<span class="hljs-number">6</span>字节（指令执行时IP不会增加，内部执行<span class="hljs-number">10</span>次movsw后IP会增加）<br>; 拷贝余数（<span class="hljs-number">1</span>或者<span class="hljs-number">0</span>）<br>mov cx, ax  ; 根据商进行循环<br>shr cx, <span class="hljs-number">1</span> ;<span class="hljs-number">1010</span> --&gt; <span class="hljs-number">101</span> == <span class="hljs-number">5</span>（无符号，正数）<br>rep movsb  ; 循环<span class="hljs-number">5</span>次拷贝<br>mov cx, ax<br><span class="hljs-keyword">and</span> cx, <span class="hljs-number">1</span> ;<span class="hljs-number">1010</span> <span class="hljs-keyword">and</span> <span class="hljs-number">1</span> = <span class="hljs-number">0000</span>（无符号，正数）<br>rep movsb<br><br>; <span class="hljs-keyword">and</span> cx, <span class="hljs-number">1</span> -- 获取余数<br>; <span class="hljs-number">3</span> <span class="hljs-number">0011</span> &amp; <span class="hljs-number">0001</span> = <span class="hljs-number">0001</span><br>; <span class="hljs-number">4</span> <span class="hljs-number">0100</span> &amp; <span class="hljs-number">0001</span> = <span class="hljs-number">0000</span><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：在拷贝数据前需要给方向标志位（DF）：<br>cld：UP（置DF = 0，IP递增）<br>std：DN（置DF = 1，IP递减）</p>
+</blockquote>
+<p>上面的示例类似高级语言的 memcpy。</p>
+<h4 id="串存储-stos"><a href="#串存储-stos" class="headerlink" title="串存储 stos"></a>串存储 stos</h4><blockquote>
+<p>把al或ax数据传送至目的地址，类似memset。</p>
+</blockquote>
+<ul>
+<li><strong>stosb</strong>（字节串存储）：es:[di] &lt;– al、di &lt;– di±1</li>
+<li><strong>stosw</strong>（字串存储）：es:[di] &lt;– al、di &lt;– di±2</li>
+</ul>
+<p>代码示例1（1个字节）：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">cld<br>mov di, offset MY_MSG<br>mov al, <span class="hljs-number">1</span><br>stosb ; 将al中保存的数据传送到目的地址中<br></code></pre></td></tr></table></figure>
+
+<p>代码示例2（10个字节）：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">cld<br>mov di, offset MY_MSG<br>mov ax, <span class="hljs-number">0101</span>h<br>mov cx, <span class="hljs-number">5</span> ; 循环<span class="hljs-number">5</span>次传送，每次两个字节<br>rep stosw ; 将ax中保存的数据传送到目的地址中<br></code></pre></td></tr></table></figure>
+
+<h4 id="串读取-lods"><a href="#串读取-lods" class="headerlink" title="串读取 lods"></a>串读取 lods</h4><blockquote>
+<p>把指定主存单元的数据传送给al或ax，memchr。</p>
+</blockquote>
+<ul>
+<li><strong>lodsb</strong>（字节串读取）：al &lt;– ds:[si] 、si &lt;– si±1</li>
+<li><strong>lodsw</strong>（字串读取）：ax &lt;– ds:[si]、si &lt;– si±2</li>
+</ul>
+<p>代码示例1（获取1个字节）：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">cld<br>mov si, offset MY_MSG ; <span class="hljs-string">&quot;Hello&quot;</span> --&gt; <span class="hljs-string">&#x27;e&#x27;</span><br>mov cx, <span class="hljs-number">5</span> ; 循环<span class="hljs-number">5</span>次传送<br>cmp al, <span class="hljs-string">&#x27;e&#x27;</span><br>lodsb<br></code></pre></td></tr></table></figure>
+
+<h4 id="串比较-cmps"><a href="#串比较-cmps" class="headerlink" title="串比较 cmps"></a>串比较 cmps</h4><blockquote>
+<p>将主存中的源操作数减去至目的操作数，以便设置标志（影响 ZF标志位，），进而比较两操作数之间的关系，类似memcmp。</p>
+</blockquote>
+<ul>
+<li><strong>cmpsb</strong>（字节串比较）：ds:[si]－es:[si]，si &lt;– si±1，di &lt;– di±1</li>
+<li><strong>cmpsw</strong>（字串比较）：ds:[si]－es:[si]，si &lt;– si±2，di &lt;– di±2</li>
+</ul>
+<p>代码示例1（实现memcmp）：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">cld<br>mov si, offset MY_MSG1 ; <span class="hljs-string">&quot;Hello World$&quot;</span><br>mov di, offset MY_MSG2 ; <span class="hljs-string">&quot;HellO WORLD$&quot;</span><br>mov cx, <span class="hljs-number">5</span> ; 循环<span class="hljs-number">5</span>次进行比较两个字符串是否相同<br>;repnz cmpsb ; 影响 ZF标志位，ZF != <span class="hljs-number">0</span> 继续比较<br>repz cmpsb ; 影响 ZF标志位，ZF == <span class="hljs-number">0</span> 继续比较<br><br>; 判断标志位<br>jnz xxx<br><br>;xxx<br></code></pre></td></tr></table></figure>
+
+<h4 id="串扫描-scas"><a href="#串扫描-scas" class="headerlink" title="串扫描 (scas)"></a>串扫描 (scas)</h4><blockquote>
+<p>scas（scan string）：将al/ax减去至目的操作数（al/ax和内存进行比较），以便设置标志，进而比较al/ax与操作数之间的关系。类似strlen。</p>
+</blockquote>
+<p>代码示例1（实现strlen）：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">cld<br>mov al, <span class="hljs-string">&#x27;0&#x27;</span><br>mov di, offset MY_MSG2 ; MY_MSG2 db <span class="hljs-string">&quot;Hell&quot;</span>, <span class="hljs-string">&#x27;0&#x27;</span><br>mov cx, <span class="hljs-number">20</span> ; 循环<span class="hljs-number">20</span>次进行逐字符比较是否相同<br>push cx<br>repnz cmpsb ; 影响 ZF标志位，ZF != <span class="hljs-number">0</span> 继续比较，相等定制比较<br><br>; 可根据cx的数值判断字符串的长度<br>cx == <span class="hljs-number">0f</span><br>mov ax, cx<br>pop cx<br>sub cx, ax ; cx = <span class="hljs-number">14</span>H - F = <span class="hljs-number">5</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="循环控制指令-loop"><a href="#循环控制指令-loop" class="headerlink" title="循环控制指令 loop"></a>循环控制指令 loop</h3><blockquote>
+<p>用寄存器 cx 作为计数器（每执行一次就会自动减1），来控制程序的循环（属于段内SHORT短类型转移,目的地址必须距本指令在-128到+127个字节的范围内）。</p>
+</blockquote>
+<p>功能：(cx)&lt;–(cx)-1，(cx)&lt;&gt;0,则转移至标号处循环执行，直至(cx)=0，继续执行后继指令。</p>
+<p>代码示例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">  mov cx, <span class="hljs-number">10</span><br>LOOP1:<br>  mov ax, cx<br>  xxx<br>  <br>  ;dec cx<br>  ;jnz LOOP1<br>  loop LOOP1 ; 等价上面<span class="hljs-number">2</span>行代码<br></code></pre></td></tr></table></figure>
+
+<p>注意：在8086CPU时，使用loop指令要比dec、jxx两条指令的指令周期要短，所以更加划算，而在80486CPU及以后，dec、jxx两条指令进行了优化，使用两条指令所花的指令周期要比使用loop指令的指令周期要划算。</p>
+<h3 id="伪指令"><a href="#伪指令" class="headerlink" title="伪指令"></a>伪指令</h3><blockquote>
+<p>简单来说就是写给编译器看的指令。微软编译器发明了宏的概念（宏汇编），微软的编译器也叫 “宏编译器”。编写一行伪代码，会按照内部的定式生成各种对应格式的汇编代码。</p>
+</blockquote>
+<blockquote>
+<p>更多伪指令详见：<a href="https://docs.microsoft.com/zh-cn/cpp/assembler/masm/directives-reference?view=msvc-160">微软官方伪指令文档</a></p>
+</blockquote>
+<p>示例代码：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">; 分支汇编代码<br>  mov cx, <span class="hljs-number">10</span><br>LOOP1:<br>  mov ax, cx<br>  dec cx<br>  jnz LOOP1<br><br>; 使用伪指令（小数点 <span class="hljs-string">&#x27;.&#x27;</span> 开头就是伪指令）<br>.<span class="hljs-keyword">if</span> ax == <span class="hljs-number">10</span><br>  mov ax, bx<br>.<span class="hljs-keyword">else</span><br>  mov bx, bx<br>.endif<br><br>; 循环<br>.<span class="hljs-keyword">while</span> ax &lt; <span class="hljs-number">1024</span><br>  inc ax<br>.endw<br></code></pre></td></tr></table></figure>
+
+<p>高级语言（C、C++）就是汇编代码通过伪指令发展来的。</p>
+<ul>
+<li>使用伪指令编写函数使用C调用约定时，生成的汇编代码会自动平衡堆栈，自动传递参数。使用stdcall调用约定时，在函数返回时，编译器会根据参数的数量自动平衡堆栈（例如：参数个数为2，伪指令 ret 对应的汇编代码为：ret 0004H）。</li>
+<li>函数内部使用寄存器需要保存环境，使用伪代码 uses 便可以由编译器自动保存寄存器环境，自动释放寄存器环境（在函数的调用约定后面使用伪指令 uses 即可，例如：**stdcall uses ax bx, 参数1:word …**）。</li>
+</ul>
+<p>代码示例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++">MY_Code segment<br>; 编写函数<br>MY_ADD  proc stdcall uses ax cx, p1:word, p2:word<br>  ; 定义局部变量（为了命名规范，定义局部变量加前缀 <span class="hljs-string">&#x27;@&#x27;</span>）<br>  local @n1:word ; 会自动抬栈<br>  local @n2:word<br>  local @n3[<span class="hljs-number">4</span>]:byte ; 定义数组<br>  <br>  mov @n1, <span class="hljs-number">1</span> ; 局部变量赋值<br>  mov @n2, <span class="hljs-number">2</span><br>  <br>  mov ax, p1<br>  add, cx, p2<br>  ret<br>MY_ADD endp<br>MAIN:<br>  mov ax, MY_Data<br>  mov ds, ax<br>  mov cs, ax<br>  <br>  ; 使用函数 使用 invoke 调用函数<br>  invoke MY_ADD, <span class="hljs-number">1</span>, <span class="hljs-number">2</span> ;传递参数<br>  <br>  ...<br>MY_Code ends<br>end MAIN<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>伪指令的好处：代码可读性较强（接近高级语言），参数、判断条件等编写方便，标号也不用写（跳来跳去的）。</p>
+</blockquote>
+<p>操作示例：</p>
+<p><img src="9.png"></p>
+<p><img src="10.png"></p>
+]]></content>
+      <categories>
+        <category>assembly</category>
+      </categories>
+      <tags>
+        <tag>16位汇编部分指令</tag>
       </tags>
   </entry>
 </search>
