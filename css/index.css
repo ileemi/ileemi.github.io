@@ -322,6 +322,72 @@ canvas:not(#ribbon-canvas),
   -ms-animation: donate_effcet 0.3s 0.1s ease both;
   animation: donate_effcet 0.3s 0.1s ease both;
 }
+.github-badge {
+  margin-left: 5px;
+  display: inline-block;
+  border-radius: 4px;
+  text-shadow: none;
+  color: #fff;
+  line-height: 15px;
+  background-color: #abbac3;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+.github-badge .badge-subject {
+  display: inline-block;
+  background-color: #4d4d4d;
+  padding: 4px 4px 4px 6px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.github-badge .badge-value {
+  display: inline-block;
+  padding: 4px 6px 4px 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.github-badge .bg-blue {
+  background: -webkit-linear-gradient(left, #3a6186, #89253e);
+  background: -moz-linear-gradient(left, #3a6186, #89253e);
+  background: -o-linear-gradient(left, #3a6186, #89253e);
+  background: -ms-linear-gradient(left, #3a6186, #89253e);
+  background: linear-gradient(to right, #3a6186, #89253e);
+}
+.github-badge .bg-brightgreen {
+  background: -webkit-linear-gradient(left, #fc5c7d, #6a82fb);
+  background: -moz-linear-gradient(left, #fc5c7d, #6a82fb);
+  background: -o-linear-gradient(left, #fc5c7d, #6a82fb);
+  background: -ms-linear-gradient(left, #fc5c7d, #6a82fb);
+  background: linear-gradient(to right, #fc5c7d, #6a82fb);
+}
+.github-badge .bg-orange {
+  background: -webkit-linear-gradient(left, #f0c27b, #4b1248);
+  background: -moz-linear-gradient(left, #f0c27b, #4b1248);
+  background: -o-linear-gradient(left, #f0c27b, #4b1248);
+  background: -ms-linear-gradient(left, #f0c27b, #4b1248);
+  background: linear-gradient(to right, #f0c27b, #4b1248);
+}
+.github-badge .bg-gradient {
+  background: -webkit-linear-gradient(left, #3ca5f6, #a86af9);
+  background: -moz-linear-gradient(left, #3ca5f6, #a86af9);
+  background: -o-linear-gradient(left, #3ca5f6, #a86af9);
+  background: -ms-linear-gradient(left, #3ca5f6, #a86af9);
+  background: linear-gradient(to right, #3ca5f6, #a86af9);
+}
+.github-badge .bg-blueviolet {
+  background: -webkit-linear-gradient(left, #654ea3, #eaafc8);
+  background: -moz-linear-gradient(left, #654ea3, #eaafc8);
+  background: -o-linear-gradient(left, #654ea3, #eaafc8);
+  background: -ms-linear-gradient(left, #654ea3, #eaafc8);
+  background: linear-gradient(to right, #654ea3, #eaafc8);
+}
+.github-badge .bg-DNS {
+  background: -webkit-linear-gradient(left, #aa4b6b, #6b6b83, #3b8d99);
+  background: -moz-linear-gradient(left, #aa4b6b, #6b6b83, #3b8d99);
+  background: -o-linear-gradient(left, #aa4b6b, #6b6b83, #3b8d99);
+  background: -ms-linear-gradient(left, #aa4b6b, #6b6b83, #3b8d99);
+  background: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
+}
 @-moz-keyframes scroll-down-effect {
   0% {
     top: 0;
@@ -5368,6 +5434,363 @@ blockquote.pullquote.right {
   filter: none;
   background-color: var(--readmode-light-color) !important;
   color: var(--font-color);
+}
+* {
+    box-sizing: border-box;
+}
+  /* 移动端显示/隐藏 /none/block，可自定义显示一个 */
+  @media screen and (max-width: 970px) {
+    .d-box1 {
+      display: none;
+    }
+    .dengl .d-box {
+      right: 0px;
+      top: -40px;
+      /* 自定义灯笼大小 */
+      transform: scale(0.4);
+    }
+  }
+  .dengl{
+    position: fixed;
+    z-index: 9;
+  }
+  /* .d-box,.d-box1{
+    z-index: 9;
+  } */
+  .d-box {
+    position: fixed;
+    /* 自定义灯笼的位置 */
+    right: 85px;
+    top: 0;
+    /* 自定义灯笼大小 */
+    transform: scale(0.8);
+  }
+  .d-box1 {
+    position: fixed;
+    /* 自定义灯笼的位置 */
+    left: 0;
+    top: 0;
+    /* 自定义灯笼大小 */
+    transform: scale(0.8);
+  }
+  /* 修改灯笼的字体 */
+  .d-box .d1::after {
+    content: '牛运亨通';
+  }
+  .d-box1 .d1::after {
+    content: '牛年大吉';
+  }
+  .d-box1 .d1,
+  .d-box1 .d2,
+  .d-box1 .d1::after,
+  .d-box1 .d1::before,
+  .d-box1 .d2::after,
+  .d-box1 .d2::before,
+  .d-box1 .d2 ul li span,
+  .d-box1 .d1 ul li span {
+    background-color: #f01f1a;
+    border: 5px solid #5c1713;
+    /* 自定义灯笼的阴影 */
+    box-shadow: 0 5px 61px rgba(255, 240, 29, 0.88);
+  }
+  .d1,
+  .d2,
+  .d1::after,
+  .d1::before,
+  .d2::after,
+  .d2::before,
+  .d2 ul li span,
+  .d1 ul li span {
+    background-color: #f01f1a;
+    border: 5px solid #5c1713;
+    /* 自定义灯笼的阴影 */
+    box-shadow: 0 5px 61px #ff1d1d;
+  }
+  .d1::after,
+  .d1::before,
+  .d2::after,
+  .d2::before{
+    box-sizing: content-box;
+  }
+  .d1::after,
+  .d1::before {
+    height: 82px;
+    position: absolute;
+    top: 0;
+    content: '';
+    font-size: 17px;
+  }
+  .d1,
+  .d2 {
+    position: relative;
+    animation: swing 4s linear infinite;
+    transform-origin: top center;
+  }
+  .d1 {
+    width: 160px;
+    top: 100px;
+    height: 90px;
+    right: 0;
+    border-radius: 80px/49px;
+  }
+  .d1::before {
+    top: -5px;
+    right: 7px;
+    width: 123px;
+    border-radius: 62px/52px;
+  }
+  .d1::after {
+    text-align: center;
+    line-height: 90px;
+    color: #ffe31d;
+    font-weight: 600;
+    top: -5px;
+    right: 35px;
+    width: 69px;
+    border-radius: 41px/49px;
+  }
+  .d1 span {
+    position: absolute;
+    top: 84px;
+    left: 49px;
+    width: 50px;
+    height: 16px;
+    z-index: 2;
+    border-radius: 0 0 10px 10px;
+    background-color: #ffe31d;
+    border: 5px solid #5c1713;
+  }
+  .d1 span:nth-child(2) {
+    top: -17px;
+    border-radius: 10px 10px 0 0;
+  }
+  .d1 p {
+    position: absolute;
+    top: -31px;
+    left: 13px;
+    width: 16px;
+    height: 13px;
+    border-radius: 25px;
+    border: 5px solid #5c1713;
+    border-bottom: 0;
+  }
+  .d1 ul,.d2 ul{
+    margin: 0;
+    padding: 0;
+  }
+  .d1 ul {
+    position: relative;
+    top: 98px;
+    left: 52px;
+    width: 45px;
+    display: flex;
+  }
+  .d1 li {
+    flex: 1;
+    list-style: none;
+    height: 24px;
+    margin: 0px 2.5px;
+    width: 5px;
+    border-radius: 5px;
+    border-right: 3.5px solid #5c1713;
+  }
+  .d1 ul li:nth-child(3) {
+    content: '';
+    height: 50px;
+  }
+  .d1 ul li:nth-child(3)::before {
+    content: '';
+    box-sizing: content-box;
+    position: absolute;
+    top: 47px;
+    left: 16px;
+    width: 5px;
+    height: 5px;
+    border-radius: 5px 5px 10px 10px;
+    background-color: #ffe31d;
+    border: 5px solid #5c1713;
+  }
+  .d1 ul li span {
+    position: absolute;
+    top: 20px;
+    left: 17px;
+    width: 13px;
+    height: 19px;
+    border-radius: 14px;
+  }
+  .d2::after,
+  .d2::before {
+    position: absolute;
+    height: 128px;
+    top: -3px;
+    content: '';
+  }
+  .d2 {
+    width: 199px;
+    height: 128px;
+    top: -61px;
+    right: -122px;
+    border-radius: 98px/70px;
+  }
+  .d2::before {
+    top: -8px;
+    right: 18px;
+    width: 143px;
+    border-radius: 69px/67px;
+  }
+  /* 自定义背景图片 */
+  .d2::after {
+    top: -8px;
+    right: 51px;
+    width: 75px;
+    border-radius: 57px/89px;
+    background: url(https://7.dusays.com/2021/02/03/7e1a77cf800cf.png) no-repeat;
+    background-position: center;
+    background-size: 92px auto;
+  }
+  .d2 span {
+    position: absolute;
+    top: 123px;
+    left: 68px;
+    width: 55px;
+    height: 14px;
+    z-index: 2;
+    border-radius: 0 0 10px 10px;
+    background-color: #ffe31d;
+    border: 5px solid #5c1713;
+  }
+  .d2 span:nth-child(2) {
+    top: -16px;
+    border-radius: 10px 10px 0 0;
+  }
+  .d2 p {
+    position: absolute;
+    top: -32px;
+    left: 13px;
+    width: 19px;
+    height: 13px;
+    border-radius: 25px;
+    border: 5px solid #5c1713;
+    border-bottom: 0;
+  }
+  .d2 ul {
+    position: relative;
+    top: 135px;
+    left: 68px;
+    width: 53px;
+    display: flex;
+  }
+  .d2 li {
+    flex: 1;
+    list-style: none;
+    height: 24px;
+    margin: 0px 3px;
+    width: 4px;
+    border-radius: 7px;
+    border-right: 3px solid #5c1713;
+  }
+  .d2 ul li:nth-child(3) {
+    content: '';
+    height: 60px;
+  }
+  .d2 ul li:nth-child(3)::before {
+    content: '';
+    position: absolute;
+    box-sizing: content-box;
+    top: 59px;
+    left: 19px;
+    width: 9px;
+    height: 6px;
+    border-radius: 5px 5px 10px 10px;
+    background-color: #ffe31d;
+    border: 5px solid #5c1713;
+  }
+  .d2 ul li span {
+    position: absolute;
+    top: 21px;
+    left: 19px;
+    width: 18px;
+    height: 17px;
+    border-radius: 20px;
+  }
+  @keyframes swing {
+    0% {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(-13deg);
+    }
+    50% {
+      transform: rotate(0);
+    }
+    75% {
+      transform: rotate(13deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+  
+/* 底部优化 */
+#footer-wrap .bear{
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 100px;
+  background: url(https://7.dusays.com/2021/01/30/ba145b935201b.png) no-repeat;
+  animation: bear .6s steps(8) infinite,bear-move 2s forwards;
+}
+.bear1{
+  position: absolute;
+  top:0;
+  width: 200px;
+  height: 100px;
+  right: 0;
+  background: url(https://7.dusays.com/2021/01/30/68f8d90401d5a.png) no-repeat;
+  transform: rotateY(180deg);
+  animation: bear1 .6s steps(8) infinite,bear-move1 2s forwards;
+}
+@keyframes bear1{
+  0%{
+  }
+  100%{
+      background-position: -1600px 0;
+  }
+}
+@keyframes bear-move1{
+  0%{
+      right: 0%;
+  }
+  100%{
+      right: 25%;
+      /* transform: translate(50%); */
+      /* margin-left: -100px; */
+      margin-right: -100px;
+  }
+}
+
+@keyframes bear{
+  0%{
+  }
+  100%{
+      background-position: -1600px 0;
+  }
+}
+@keyframes bear-move{
+  0%{
+      left: 0%;
+  }
+  100%{
+      left: 25%;
+      transform: translate(-50%);
+      /* margin-left: -100px; */
+  }
+}
+
+@media (max-width: 992px){
+  .bear,.bear1{
+      display: none;
+  }
 }
 .search-dialog {
   position: fixed;
